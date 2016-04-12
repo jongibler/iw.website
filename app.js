@@ -3,6 +3,9 @@ var app = express();
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/public/index-gif.html');
+});
+app.get('/v', function (req, res) {
   res.sendFile(__dirname + '/public/index-video.html');
 });
 

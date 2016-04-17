@@ -45,24 +45,27 @@
   #Footer {
     background: url('images/home_media_pattern3.png');
     display: none;
-    position:fixed;
+    /*position:fixed;
     bottom:0;
     left:0;
     width:100%;
-    z-index: 1;
+    z-index: 1;*/
   }
   #Header_wrapper {
     z-index: 2;
   }
   #Content {
-    position:relative;
+    /*position:relative;*/
     z-index: 3;
   }
   #Wrapper {
-    margin-bottom:230px;
+    /* margin-bottom:230px;  */
   }
   @media only screen and (max-width: 760px) {
     #slide-1-layer-3 {
+      display:none;
+    }
+    .contact_icons {
       display:none;
     }
   }
@@ -78,27 +81,6 @@
         <div id="Header_wrapper" class="bg-parallax" data-stellar-background-ratio="0.5">
             <!-- Header -->
             <header id="Header">
-              <div id="Overlay">
-                  <nav id="overlay-menu">
-                      <ul id="menu-main-menu" class="overlay-menu">
-                          <li class=" menu-item-5">
-                              <a href="index-video.html">HOME</a>
-                          </li>
-                          <li id="menu-item-17" class=" menu-item-17">
-                              <a href="content/video/about.html">ABOUT BEVIDEO</a>
-                          </li>
-                          <li id="menu-item-16" class=" menu-item-16">
-                              <a href="content/video/our-portfolio.html">OUR PORTFOLIO</a>
-                          </li>
-                          <li id="menu-item-15" class=" menu-item-15">
-                              <a href="content/video/staff.html">OUR STUFF</a>
-                          </li>
-                          <li id="menu-item-14" class=" menu-item-14">
-                              <a href="content/video/hire-us.html">HIRE US</a>
-                          </li>
-                      </ul>
-                  </nav>
-              </div><a class="overlay-menu-toggle" href="#"><i class="open icon-menu"></i><i class="close icon-cancel"></i></a>
 
                 <!-- Revolution slider area-->
                 <div class="mfn-main-slider">
@@ -401,7 +383,7 @@
     <script type="text/javascript">
 
         var latlng = new google.maps.LatLng(51.521806, -0.090962);
-        var draggable = true;
+        var isMobile = <%= mobile ? 'true' : 'false' %>;
         var myOptions = {
             zoom: 13,
             center: latlng,
@@ -522,11 +504,12 @@
                     "weight": 1.2
   }]
  }],
-            draggable: draggable,
+            draggable: !isMobile,
             zoomControl: true,
             mapTypeControl: false,
-            streetViewControl: false,
-            scrollwheel: false
+            streetViewControl: true,
+            scrollwheel: false,
+            navigationControl: true
         };
         var map = new google.maps.Map(document.getElementById("google-map-area-567bc6f0d360c"), myOptions);
         var marker = new google.maps.Marker({

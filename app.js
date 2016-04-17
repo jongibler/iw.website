@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
+var MobileDetect = require('mobile-detect');
+
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/public/index.html');
+  var md = new MobileDetect(req.headers['user-agent']);
+  res.render(__dirname + '/public/index.ejs', { mobile : md.mobile() });
 });
 
 //start

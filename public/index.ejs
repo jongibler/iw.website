@@ -40,7 +40,7 @@
     }
 
     #Footer {
-      background-image:url( "/images/paperBackground.jpg");
+      background-image: url("/images/paperBackground.jpg");
       background-repeat: repeat-x;
       display: none;
       /*position:fixed;
@@ -74,25 +74,28 @@
       #slide-1-layer-2-mobile {
         display: block;
       }
-      .contact_icons {
-        display: none;
-      }
     }
 
     h3 {
-      color: #20bf9f !important;
+      color: #0fddaf !important;
     }
 
     h5 {
       color: #626262 !important;
     }
 
-    table, tr, td {
-      border:none; !important;
+    table,
+    tr,
+    td {
+      border: none;
+      !important;
       font-size: 16px;
       font-weight: bold;
     }
 
+    .menu-item {
+      cursor: pointer !important;
+    }
   </style>
 
 </head>
@@ -109,20 +112,17 @@
         <div id="Overlay">
           <nav id="overlay-menu">
             <ul id="menu-main-menu" class="overlay-menu">
-              <li class=" menu-item-5">
-                <a href="index-video.html">HOME</a>
+              <li>
+                <a class="menu-item" onclick="scrollToAnchor('startSection')">START</a>
               </li>
-              <li id="menu-item-17" class=" menu-item-17">
-                <a href="content/video/about.html">ABOUT BEVIDEO</a>
+              <li>
+                <a class="menu-item" onclick="scrollToAnchor('whatWeDoSection')">WHAT WE DO</a>
               </li>
-              <li id="menu-item-16" class=" menu-item-16">
-                <a href="content/video/our-portfolio.html">OUR PORTFOLIO</a>
+              <li class="menu-item">
+                <a onclick="scrollToAnchor('pricingSection')">PRICING</a>
               </li>
-              <li id="menu-item-15" class=" menu-item-15">
-                <a href="content/video/staff.html">OUR STUFF</a>
-              </li>
-              <li id="menu-item-14" class=" menu-item-14">
-                <a href="content/video/hire-us.html">HIRE US</a>
+              <li class="menu-item">
+                <a onclick="scrollToAnchor('contactSection')">CONTACT</a>
               </li>
             </ul>
           </nav>
@@ -131,12 +131,12 @@
 
 
         <!-- Revolution slider area-->
-        <div class="mfn-main-slider">
+        <div id="startSection" class="mfn-main-slider">
           <div id="rev_slider_1_2_wrapper" class="rev_slider_wrapper fullscreen-container" style="padding:0px;">
             <div id="rev_slider_1_2" class="rev_slider fullscreenbanner" data-version="5.0.4.1">
               <ul>
                 <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
-                  <img src="images/lucaColumns.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0"
+                  <img src="images/mainColumns.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0"
                       data-bgparallax="off" class="rev-slidebg" data-no-retina>
                   <div class="tp-caption tp-resizeme" id="slide-1-layer-1" data-x="center" data-hoffset="" data-y="center" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;" data-transform_out="opacity:0;s:300;s:300;"
                       data-start="500" data-responsive_offset="on" style="z-index: 5;">
@@ -164,12 +164,8 @@
         <div class="sections_group" style="z-index:3 !important;">
           <div class="entry-content">
 
-
             <!-- MAIN CONTENT SECTIONS START -->
-
-
-            <!-- two blocks section -->
-            <div class="section no-margin-h no-margin-v full-width " style="padding-top:0px; padding-bottom:0px; background-color:#f9f9f9">
+            <div id="whatWeDoSection" class="section no-margin-h no-margin-v full-width " style="padding-top:0px; padding-bottom:0px; background-color:#f9f9f9">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
 
@@ -177,7 +173,6 @@
                   <div class="column one-second column_column">
                     <div class="column_attr align_right">
                       <div style="padding: 50px 6%; max-width: 570px; float: right;">
-
                         <hr class="no_line hrmargin_b_20" />
                         <h3>WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
                         <hr class="no_line hrmargin_b_40" />
@@ -207,7 +202,6 @@
                       </div>
                     </div>
                   </div>
-
                   <!-- One Second (1/2) Column -->
                   <!-- <div class="column one-second column_image">
                     <div class="image_frame no_link scale-with-grid aligncenter no_border">
@@ -215,38 +209,28 @@
                       </div>
                     </div>
                   </div> -->
-
                   <!-- One Second (1/2) Column -->
                   <div class="column one-second">
                     <div class="image_frame no_link scale-with-grid aligncenter no_border">
-                      <div class="image_wrapper"><img class="scale-with-grid" src="images/businessmanSample.jpg" alt="" />
+                      <div class="image_wrapper"><img class="scale-with-grid" src="images/getTalentBg.jpg" alt="" />
                       </div>
                     </div>
                   </div>
-
-
-
-
-
                 </div>
               </div>
             </div>
-
 
             <!-- 4 blocks section right -->
             <div class="section no-margin-h no-margin-v full-width " style="padding-top:0px; padding-bottom:0px; background-color:#f9f9f9">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
-
-
                   <!-- One Second (1/2) Column -->
                   <div class="column one-second">
                     <div class="image_frame no_link scale-with-grid aligncenter no_border">
-                      <div class="image_wrapper"><img class="scale-with-grid" src="images/programmerSample.jpg" alt="" />
+                      <div class="image_wrapper"><img class="scale-with-grid" src="images/getHiredBg.jpg" alt="" />
                       </div>
                     </div>
                   </div>
-
                   <!-- One Second (1/2) Column -->
                   <div class="column one-second column_column">
                     <div class="column_attr align_left">
@@ -273,142 +257,133 @@
                             <td>Superstars</td>
                           </tr>
                         </table>
-                        </div>
-
-
-
-
                       </div>
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Parallax bar section -->
-            <div class="section " style="padding-top:100px; padding-bottom:150px; background-color:; background-image:url(images/lucaWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
-              <div class="section_wrapper clearfix">
-                <div class="items_group clearfix">
-                    <!-- One full width row-->
-                    <div class="column one column_column">
-                        <div class="column_attr align_center">
-                            <hr class="no_line hrmargin_b_20" />
-                            <h2>PRICING</h2>
-                            <h5 class="hrmargin_0">Something a little different?</h5>
-                        </div>
+          <!-- Parallax bar section -->
+          <div id="pricingSection" class="section " style="padding-top:100px; padding-bottom:150px; background-color:; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+            <div class="section_wrapper clearfix">
+              <div class="items_group clearfix">
+                <!-- One full width row-->
+                <div class="column one column_column">
+                  <div class="column_attr align_center">
+                    <hr class="no_line hrmargin_b_20" />
+                    <h2>PRICING</h2>
+                    <h5 class="hrmargin_0">Something a little different?</h5>
+                  </div>
+                </div>
+
+                <div class="column one-third column_column">
+                  <div class="column_attr ">
+                    <div>
+                      <h4>Velit mauris egestas quam</h4>
+                      <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
                     </div>
-
-                    <div class="column one-third column_column">
-                        <div class="column_attr ">
-                            <div>
-                                <h4>Velit mauris egestas quam</h4>
-                                <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+                <div class="column one-third column_column">
+                  <div class="column_attr ">
+                    <div>
+                      <h4>Velit mauris egestas quam</h4>
+                      <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
                     </div>
-                    <div class="column one-third column_column">
-                        <div class="column_attr ">
-                            <div>
-                                <h4>Velit mauris egestas quam</h4>
-                                <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
-                            </div>
-                        </div>
+                  </div>
+                </div>
+                <div class="column one-third column_column">
+                  <div class="column_attr ">
+                    <div>
+                      <h4>Velit mauris egestas quam</h4>
+                      <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
                     </div>
-                    <div class="column one-third column_column">
-                        <div class="column_attr ">
-                            <div>
-                                <h4>Velit mauris egestas quam</h4>
-                                <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
-                            </div>
-                        </div>
-                    </div>
-
-
-
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Contact form section -->
-            <div class="section " id="contact" style="padding-top:80px; padding-bottom:40px; background-color:rgba(118,238,198,.5);">
-              <div class="section_wrapper clearfix">
-                <div class="items_group clearfix">
-                  <!-- One Sixth (1/6) Column -->
-                  <div class="column one-sixth column_placeholder">
-                    <div class="placeholder">
+          <!-- Contact form section -->
+          <div class="section " id="contactSection" style="padding-top:80px; padding-bottom:40px; background-color:rgba(15, 221, 175,.5);">
+            <div class="section_wrapper clearfix">
+              <div class="items_group clearfix">
+                <!-- One Sixth (1/6) Column -->
+                <div class="column one-sixth column_placeholder">
+                  <div class="placeholder">
+                    &nbsp;
+                  </div>
+                </div>
+
+                <!-- Two Third (2/3) Column -->
+                <div class="column two-third column_column ">
+                  <div class="column_attr align_center">
+                    <h2 style="color: #ffffff;">Hello!</h2>
+                    <hr class="no_line hrmargin_b_30" />
+                    <p style="font-size:24px;">
+                      <a style="color:#fff;" href="tel:+44123456789">(+44) 123.456.789</a>
+                    </p>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Map section -->
+          <div class="section mcb-section full-width " style="padding-top:0px; padding-bottom:0px; ">
+            <div class="section_wrapper mcb-section-inner">
+              <div class="wrap mcb-wrap one clearfix">
+                <!-- One Full Row-->
+                <div class="column mcb-column one column_map ">
+
+                  <!-- Google map area -->
+                  <div class="google-map-wrapper no_border">
+                    <div class="google-map" id="google-map-area-567bc6f0d360c" style="width:100%; height:500px;">
                       &nbsp;
                     </div>
                   </div>
-
-                  <!-- Two Third (2/3) Column -->
-                  <div class="column two-third column_column ">
-                    <div class="column_attr align_center">
-                      <h2 style="color: #ffffff;">Hello!</h2>
-                      <hr class="no_line hrmargin_b_30" />
-                      <p style="font-size:24px;">
-                        E-mail us at: <a style="color:#fff;" href="mailto:info@intelligentways.com">info@intelligentways.com</a>
-                      </p>
-                      <p style="font-size:24px;">
-                        or give us a shout. <a style="color:#fff;" href="tel:+44123456789">(+44) 123.456.789</a>
-                      </p>
-                    </div>
-                  </div>
-
-
-
                 </div>
               </div>
             </div>
-
-            <!-- Map section -->
-            <div class="section mcb-section full-width " style="padding-top:0px; padding-bottom:0px; ">
-              <div class="section_wrapper mcb-section-inner">
-                <div class="wrap mcb-wrap one clearfix">
-                  <!-- One Full Row-->
-                  <div class="column mcb-column one column_map ">
-
-                    <!-- Google map area -->
-                    <div class="google-map-wrapper no_border">
-                      <div class="google-map" id="google-map-area-567bc6f0d360c" style="width:100%; height:500px;">
-                        &nbsp;
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- MAIN CONTENT SECTIONS END -->
           </div>
+
+          <!-- MAIN CONTENT SECTIONS END -->
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Footer-->
-    <footer id="Footer" class="clearfix">
-      <div class="widgets_wrapper">
-        <div class="container">
-          <div class="column one">
-            <!-- Text Area -->
-            <aside id="text-2" class="widget widget_text">
-              <div class="textwidget">
-                <div style="text-align: center;">
-                  <p class="contact_icons">
-                    <a href="#" class="icon_bar  icon_bar_facebook icon_bar_small"><span class="t"><i class="icon-facebook"></i></span><span class="b"><i class="icon-facebook"></i></span></a>
-            <a href="#" class="icon_bar  icon_bar_google icon_bar_small"><span class="t"><i class="icon-gplus"></i></span><span class="b"><i class="icon-gplus"></i></span></a>
-            <a href="#" class="icon_bar  icon_bar_twitter icon_bar_small"><span class="t"><i class="icon-twitter"></i></span><span class="b"><i class="icon-twitter"></i></span></a>
-
-                  </p>
-                  <p style="font-size: 16px; color:#20bf9f">
-                    © 2010-2016 www.IntelligentWays.com
-                  </p>
-                </div>
+  <!-- Footer-->
+  <footer id="Footer" class="clearfix">
+    <div class="widgets_wrapper">
+      <div class="container">
+        <div class="column one">
+          <!-- Text Area -->
+          <aside id="text-2" class="widget widget_text">
+            <div class="textwidget">
+              <div style="text-align: center;">
+                <p class="contact_icons">
+                  <a href="#"><i class="icon-skype-circled"></i></a>
+                  <a href="#"><i class="icon-gplus-circled"></i></a>
+                  <a href="#"><i class="icon-twitter-circled"></i></a>
+                  <a href="#"><i class="icon-linkedin-circled"></i></a>
+                </p>
+                <p style="font-size: 18px; color:#0fddaf">
+                  © 2010-2016 www.IntelligentWays.com
+                </p>
               </div>
-            </aside>
-          </div>
+            </div>
+          </aside>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
 
   </div>
@@ -438,7 +413,7 @@
 
   <script type="text/javascript">
     var isMobile = <%= mobile ? 'true' : 'false' %>;
-    var latlng = new google.maps.LatLng(51.521806, -0.090962);
+    var latlng = new google.maps.LatLng(52.9322992, -1.1301495, 17);
     var myOptions = {
       zoom: 13,
       center: latlng,
@@ -641,6 +616,13 @@
     });
     jQuery('#Content').show();
     jQuery('#Footer').show();
+
+    function scrollToAnchor(aid) {
+      var aTag = jQuery("#" + aid );
+      jQuery('html,body').animate({
+        scrollTop: aTag.offset().top
+      }, 'slow');
+    }
   </script>
 
 </body>

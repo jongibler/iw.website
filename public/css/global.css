@@ -344,17 +344,17 @@ button::-moz-focus-inner,input::-moz-focus-inner {
 */
 /* Red */
 a.button.button_red,a.tp-button.red {
-    background-color: #20bf9f;
+    background-color: #0fddaf;
     color: #fff;
 }
 
 .button-stroke a.button.button_red,.button-stroke a.button.button_red .button_icon i,.button-stroke a.tp-button.red {
-    color: #20bf9f;
-    border-color: #20bf9f;
+    color: #0fddaf;
+    border-color: #0fddaf;
 }
 
 .button-stroke a:hover.button.button_red,.button-stroke a:hover.tp-button.red {
-    background-color: #20bf9f !important;
+    background-color: #0fddaf !important;
     color: #fff;
 }
 

@@ -756,7 +756,7 @@ body.header-stack:not(.template-slider) #Header { min-height: 315px; }
 
 /* #Overlay Menu
 ================================================== */
-#Overlay { position:fixed; top:0; left:0; width:100%; height:100%; z-index:9910; background:rgba(41,145,214,.95); display:none;}
+#Overlay { position:fixed; top:0; left:0; width:100%; height:100%; z-index:9910; background:rgba(118,238,198,.95); display:none;}
 #overlay-menu { position:absolute; width:700px; left:50%; margin-left:-350px; top:50%; margin-top:-150px;}
 #overlay-menu ul li { text-align:center;}
 #overlay-menu ul li a { color:#fff; font-size:34px; line-height:52px; letter-spacing:3px; text-decoration:none;}

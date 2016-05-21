@@ -67,10 +67,10 @@
 
 /* Selections */
 	*::-moz-selection {
-		background-color: #0fddaf;
+		background-color: #fff;
 	}
 	*::selection {
-		background-color: #0fddaf;
+		background-color: #fff;
 	}
 
 /* Grey */

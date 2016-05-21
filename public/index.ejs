@@ -40,7 +40,8 @@
     }
 
     #Footer {
-      background: url('http://thumb101.shutterstock.com/display_pic_with_logo/2978392/400653697/stock-vector-modern-background-with-grey-numbers-on-a-white-background-abstract-matrix-background-programming-400653697.jpg');
+      background-image:url( "/images/paperBackground.jpg");
+      background-repeat: repeat-x;
       display: none;
       /*position:fixed;
             bottom:0;
@@ -85,6 +86,12 @@
     h5 {
       color: #626262 !important;
     }
+
+    table, tr, td {
+      border:none; !important;
+      font-size: 20px;
+    }
+
   </style>
 
 </head>
@@ -155,15 +162,17 @@
       <div class="content_wrapper clearfix">
         <div class="sections_group" style="z-index:3 !important;">
           <div class="entry-content">
+
+
             <!-- MAIN CONTENT SECTIONS START -->
 
 
-            <!-- 4 blocks section left -->
-            <div class="section no-margin-h no-margin-v full-width highlight-right sections_style_0">
+            <!-- two blocks section -->
+            <div class="section no-margin-h no-margin-v full-width " style="padding-top:0px; padding-bottom:0px; background-color:#f9f9f9">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
 
-                  <!-- One Second (1/2) Column -->
+                  <!-- 1st block -->
                   <div class="column one-second column_column">
                     <div class="column_attr align_right">
                       <div style="padding: 50px 6%; max-width: 570px; float: right;">
@@ -199,12 +208,23 @@
                   </div>
 
                   <!-- One Second (1/2) Column -->
-                  <div class="column one-second column_image">
+                  <!-- <div class="column one-second column_image">
+                    <div class="image_frame no_link scale-with-grid aligncenter no_border">
+                      <div class="image_wrapper"><img class="scale-with-grid" src="images/businessmanSample.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <!-- One Second (1/2) Column -->
+                  <div class="column one-second">
                     <div class="image_frame no_link scale-with-grid aligncenter no_border">
                       <div class="image_wrapper"><img class="scale-with-grid" src="images/businessmanSample.jpg" alt="" />
                       </div>
                     </div>
                   </div>
+
+
+
 
 
                 </div>
@@ -265,21 +285,51 @@
             </div>
 
             <!-- Parallax bar section -->
-            <div class="section " style="padding-top:200px; padding-bottom:150px; background-color:; background-image:url(images/home_media_calltoaction.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+            <div class="section " style="padding-top:100px; padding-bottom:150px; background-color:; background-image:url(images/lucaWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
-                  <!-- One full width row-->
-                  <div class="column one column_column ">
-                    <div class="column_attr align_center animate" data-anim-type="fadeInUp">
-                      <h2>Lets meet and talk! Call us at +61 (0) 3 8376 6284</h2>
+                    <!-- One full width row-->
+                    <div class="column one column_column">
+                        <div class="column_attr align_center">
+                            <hr class="no_line hrmargin_b_20" />
+                            <h2>PRICING</h2>
+                            <h5 class="hrmargin_0">Something a little different?</h5>
+                        </div>
                     </div>
-                  </div>
+
+                    <div class="column one-third column_column">
+                        <div class="column_attr ">
+                            <div>
+                                <h4>Velit mauris egestas quam</h4>
+                                <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column one-third column_column">
+                        <div class="column_attr ">
+                            <div>
+                                <h4>Velit mauris egestas quam</h4>
+                                <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column one-third column_column">
+                        <div class="column_attr ">
+                            <div>
+                                <h4>Velit mauris egestas quam</h4>
+                                <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
               </div>
             </div>
 
             <!-- Contact form section -->
-            <div class="section " id="contact" style="padding-top:80px; padding-bottom:40px; background-color:#99CDC9; background-repeat:repeat; background-position:center; ">
+            <div class="section " id="contact" style="padding-top:80px; padding-bottom:40px; background-color:rgba(118,238,198,.5);">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
                   <!-- One Sixth (1/6) Column -->
@@ -292,12 +342,14 @@
                   <!-- Two Third (2/3) Column -->
                   <div class="column two-third column_column ">
                     <div class="column_attr align_center">
-                      <h2 style="color: #ffffff;">Contact centre</h2>
-                      <p style="color: #0c927e;">
-                        Consectetur lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus .lorem ipsum dolor.
-                      </p>
+                      <h2 style="color: #ffffff;">Hello!</h2>
                       <hr class="no_line hrmargin_b_30" />
-                      <h3 style="color: #126b62;">Have a question? Call us at +34 004 555 043</h3>
+                      <p style="font-size:24px;">
+                        E-mail us at: <a style="color:#fff;" href="mailto:info@intelligentways.com">info@intelligentways.com</a>
+                      </p>
+                      <p style="font-size:24px;">
+                        or give us a shout. <a style="color:#fff;" href="tel:+44123456789">(+44) 123.456.789</a>
+                      </p>
                     </div>
                   </div>
 
@@ -341,11 +393,13 @@
               <div class="textwidget">
                 <div style="text-align: center;">
                   <p class="contact_icons">
-                    <a href="#"><i class="icon-facebook-circled"></i></a><a href="#"><i class="icon-gplus-circled"></i></a><a href="#"><i class="icon-twitter-circled"></i></a><a href="#"><i class="icon-pinterest-circled"></i></a>
-                    <a href="#"><i class="icon-linkedin-circled"></i></a>
+                    <a href="#" class="icon_bar  icon_bar_facebook icon_bar_small"><span class="t"><i class="icon-facebook"></i></span><span class="b"><i class="icon-facebook"></i></span></a>
+            <a href="#" class="icon_bar  icon_bar_google icon_bar_small"><span class="t"><i class="icon-gplus"></i></span><span class="b"><i class="icon-gplus"></i></span></a>
+            <a href="#" class="icon_bar  icon_bar_twitter icon_bar_small"><span class="t"><i class="icon-twitter"></i></span><span class="b"><i class="icon-twitter"></i></span></a>
+
                   </p>
-                  <p style="font-size: 14px;">
-                    Aenean tempor leo et massa feugiat, vel vulputate ex ullamcorper. Suspendisse id eleifend arcu.
+                  <p style="font-size: 16px; color:#20bf9f">
+                    © 2010-2016 www.IntelligentWays.com
                   </p>
                 </div>
               </div>
@@ -383,10 +437,7 @@
 
   <script type="text/javascript">
     var isMobile = <%= mobile ? 'true' : 'false' %>;
-
-
     var latlng = new google.maps.LatLng(51.521806, -0.090962);
-
     var myOptions = {
       zoom: 13,
       center: latlng,
@@ -520,8 +571,6 @@
       icon: "images/map_pin.png",
       map: map
     });
-
-
 
     var tpj = jQuery;
     tpj.noConflict();

@@ -86,6 +86,20 @@
       }
     }
 
+    #slide1contentM, #slide2contentM, #slide3contentM  {
+      display:none;
+    }
+
+    @media only screen and (max-width: 640px) {
+      #slide1contentM, #slide2contentM, #slide3contentM  {
+        display:block;
+      }
+      #slide1content, #slide2content, #slide3content   {
+        display:none;
+      }
+
+    }
+
     h3 {
       color: #626262 !important;
     }
@@ -135,7 +149,7 @@
           <nav id="overlay-menu">
             <ul id="menu-main-menu" class="overlay-menu">
               <li>
-                <a class="menu-item" onclick="scrollToAnchor('startSection')">S T A R T</a>
+                <a class="menu-item" onclick="scrollToAnchor('startSection')">H O M E</a>
               </li>
               <li>
                 <a class="menu-item" onclick="scrollToAnchor('sloganSection')">W H A T &nbsp;W E &nbsp;D O</a>
@@ -168,11 +182,11 @@
 
                   <div class="tp-caption tp-resizeme" id="slide-3-layer-3" data-x="center" data-start="1500" data-hoffset="0" data-y="bottom" data-voffset="90" data-width="" data-height="" data-transform_idle="" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;"
                       data-transform_out="auto:auto;s:300;" data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
-                    <img style="cursor:pointer;" src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
+                    <img style="cursor:pointer;min-width:47px;min-height:27px;" src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
                   </div>
-                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3-mobile" data-x="center" data-hoffset="0" data-y="bottom" data-voffset="-290" data-width="" data-height="" data-transform_idle="" data-transform_in="opacity:0;s:300;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;"
+                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3-mobile" data-x="center" data-hoffset="0" data-y="bottom" data-voffset="-200" data-width="" data-height="" data-transform_idle="" data-transform_in="opacity:0;s:300;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;"
                       data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
-                    <img src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
+                    <img style="min-width:47px;min-height:27px;" src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
                   </div>
 
                 </li>
@@ -243,20 +257,23 @@
             </script>
 
             <!-- PARALLAX SLIDER SECTION -->
-            <div id="pricingSection" class="section " style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+            <div id="whatWeDoSection" class="section " style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
               <div class="section_wrapper clearfix" style="height:200px;">
 
                 <img style="position:absolute; left:-50px; top:50%; cursor:pointer;" src="images/leftArrow.png" onclick="slideLeft();" />
                 <img style="position:absolute; right:-50px; top:50%; cursor:pointer;" src="images/rightArrow.png" onclick="slideRight();" />
 
                 <div id="slide1" class="items_group clearfix">
-                  <div class="column one column_column">
+                  <div id="slide1content" class="column one column_column">
                     <h3 style="letter-spacing:10px; text-align:center; margin-top:80px;">WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
+                  </div>
+                  <div id="slide1contentM" class="column one column_column">
+                    <h4 style="letter-spacing:5px;color:#626262;text-align:center;margin-top:50px;font-size:30px;">WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
                   </div>
                 </div>
 
                 <div id="slide2" style="display:none;" class="items_group clearfix">
-                  <div class="column one column_column">
+                  <div id="slide2content" class="column one column_column">
                     <h3 style="letter-spacing:20px;text-align:center;">WHAT WE DO BEST</h3>
                     <h5 style="letter-spacing:8px; margin-top:-5px;text-align:center;">FREQUENTLY REQUESTED</h5>
                     <div style="padding-left:150px;padding-right:150px;">
@@ -279,10 +296,33 @@
                       </table>
                     </div>
                   </div>
+                  <div id="slide2contentM" class="column one column_column" style="margin-top:-20px;">
+                    <h4 style="letter-spacing:3px;text-align:center;color:#626262">WHAT WE DO BEST</h3>
+                    <h5 style="letter-spacing:4px; margin-top:-5px;text-align:center;">FREQUENTLY REQUESTED</h5>
+                    <div style="margin-left:-15px;">
+                      <table>
+                        <tr>
+                          <td>Engineers</td>
+                          <td>App Developers</td>
+                          <td>Co-Founders</td>
+                        </tr>
+                        <tr>
+                          <td>Designers</td>
+                          <td>Data Scientists</td>
+                          <td>Belly Dancers</td>
+                        </tr>
+                        <tr>
+                          <td>Product Managers</td>
+                          <td>Technical Sales People</td>
+                          <td>Superstars</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
                 </div>
 
                 <div id="slide3" style="display:none;" class="items_group clearfix">
-                  <div class="column one column_column">
+                  <div id="slide3content" class="column one column_column">
                     <h3 style="letter-spacing:20px;text-align:center;">PRICING</h3>
                     <h5 style="letter-spacing:8px; margin-top:-5px;text-align:center;">SOMETHING A LITTLE DIFFERENT</h5>
 
@@ -296,7 +336,7 @@
                       <div class="column one-third column_column">
                         <h5 style="letter-spacing:8px;text-align:center;">SUBSCRIPTION</h5>
                         <p style="font-size:16px;">
-                          Monthly subscription service for all the hiring you can muster. Tiered structure which we will design with you. We can even work onsite when you need us!
+                          Monthly subscription service for all the hiring you can muster.
                         </p>
                       </div>
                       <div class="column one-third column_column">
@@ -306,10 +346,24 @@
                         </p>
                       </div>
                     </div>
-
-
-
                   </div>
+
+                  <div id="slide3contentM" class="column one column_column" style="margin-top:-50px;">
+                    <h4 style="letter-spacing:10px;text-align:center;color:#626262;margin-bottom:20px;">PRICING</h3>
+                        <h5 style="letter-spacing:8px;text-align:center;">CLASSIC</h5>
+                        <p style="font-size:16px;">
+                          Traditional price plan. Pre-agreed fee payable following your new hires first day.
+                        </p>
+                        <h5 style="letter-spacing:8px;text-align:center;">SUBSCRIPTION</h5>
+                        <p style="font-size:16px;">
+                          Monthly subscription service for all the hiring you can muster.
+                        </p>
+                        <h5 style="letter-spacing:8px;text-align:center;">IW HOURLY</h5>
+                        <p style="font-size:16px;">
+                          For when contractors just aren’t flexible enough.
+                        </p>
+                    </div>
+
                 </div>
 
 

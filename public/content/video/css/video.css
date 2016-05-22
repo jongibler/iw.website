@@ -109,10 +109,10 @@
 	  border-color: #f7f7f7;
 	  color: #747474;
 	}
-	.button-stroke a:hover.button, .button-stroke a:hover.tp-button {
+	/*.button-stroke a:hover.button, .button-stroke a:hover.tp-button {
 		background-color: #f7f7f7 !important;
 		color: #fff;
-	}
+	}*/
 
 	/* .button_theme */
 	a.button_theme, a.tp-button.button_theme,

@@ -101,10 +101,22 @@
       !important;
       font-size: 16px;
       font-weight: bold;
+      text-align: center;
     }
 
     .menu-item {
       cursor: pointer !important;
+    }
+
+    .getTalent:hover{
+      color:white !important;
+      border-color:white !important;
+      background-color: rgba(15, 221, 175,1) !important;
+    }
+    .getHired:hover{
+      color:#626262 !important;
+      border-color:#626262 !important;
+      background-color: rgba(15, 221, 175,1) !important;
     }
   </style>
 
@@ -154,10 +166,12 @@
                     <img style="min-width:350px; min-height:178px;" src="images/iwLogoM.png" alt="" data-no-retina>
                   </div>
 
-                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3" data-x="center" data-start="1500" data-hoffset="0" data-y="bottom" data-voffset="90" data-width="" data-height="" data-transform_idle="" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;" data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
+                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3" data-x="center" data-start="1500" data-hoffset="0" data-y="bottom" data-voffset="90" data-width="" data-height="" data-transform_idle="" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:2000;e:Power3.easeInOut;"
+                      data-transform_out="auto:auto;s:300;" data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
                     <img style="cursor:pointer;" src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
                   </div>
-                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3-mobile" data-x="center" data-hoffset="0" data-y="bottom" data-voffset="-290" data-width="" data-height="" data-transform_idle="" data-transform_in="opacity:0;s:300;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;" data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
+                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3-mobile" data-x="center" data-hoffset="0" data-y="bottom" data-voffset="-290" data-width="" data-height="" data-transform_idle="" data-transform_in="opacity:0;s:300;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;"
+                      data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
                     <img src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
                   </div>
 
@@ -174,10 +188,136 @@
       <div class="content_wrapper clearfix">
         <div class="sections_group" style="z-index:3 !important;">
           <div class="entry-content">
-
             <!-- MAIN CONTENT SECTIONS START -->
 
+            <!-- SLOGAN SECION -->
             <div id="sloganSection" class="section" style="padding-top:40px; background-color:white;">
+              <div class="section_wrapper clearfix">
+                <div class="items_group clearfix">
+
+                  <div class="column one column_column ">
+                    <div class="column_attr align_center">
+                      <p style="color: #626262; font-size:24px;letter-spacing:6px;">STARTUPS, MEET TALENT</p>
+                      <p style="color: #626262; font-size:24px;">
+                        Supporting Startups in their mission to change the world.
+                      </p>
+                      <p style="font-size:16px; color:#626262">
+                        Startups need people who dare to be great, and we know how to find them, its what we do.
+                        <!-- <br /> -->
+                        We source and introduce talent with a passion for building the future.
+                        <!-- <br /> -->
+                        Innovators, Game changers, Pioneers;
+                        <!-- <br /> -->
+                        we’re here to help those who are building our tomorrow, to help them accelerate.
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <script>
+              var slideNumber = 1;
+
+              function slideRight() {
+                jQuery('#slide' + slideNumber).fadeOut();
+                if (slideNumber == 3) {
+                  slideNumber = 1;
+                } else {
+                  slideNumber++;
+                }
+                jQuery('#slide' + slideNumber).delay(1000).fadeIn();
+              };
+
+              function slideLeft() {
+                jQuery('#slide' + slideNumber).fadeOut();
+                if (slideNumber == 1) {
+                  slideNumber = 3;
+                } else {
+                  slideNumber--;
+                }
+                jQuery('#slide' + slideNumber).delay(1000).fadeIn();
+              };
+            </script>
+
+            <!-- PARALLAX SLIDER SECTION -->
+            <div id="pricingSection" class="section " style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+              <div class="section_wrapper clearfix" style="height:200px;">
+
+                <img style="position:absolute; left:-50px; top:50%; cursor:pointer;" src="images/leftArrow.png" onclick="slideLeft();" />
+                <img style="position:absolute; right:-50px; top:50%; cursor:pointer;" src="images/rightArrow.png" onclick="slideRight();" />
+
+                <div id="slide1" class="items_group clearfix">
+                  <div class="column one column_column">
+                    <h3 style="letter-spacing:10px; text-align:center; margin-top:80px;">WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
+                  </div>
+                </div>
+
+                <div id="slide2" style="display:none;" class="items_group clearfix">
+                  <div class="column one column_column">
+                    <h3 style="letter-spacing:20px;text-align:center;">WHAT WE DO BEST</h3>
+                    <h5 style="letter-spacing:8px; margin-top:-5px;text-align:center;">FREQUENTLY REQUESTED</h5>
+                    <div style="padding-left:150px;padding-right:150px;">
+                      <table>
+                        <tr>
+                          <td style="width:33%;">Engineers</td>
+                          <td style="width:33%;">App Developers</td>
+                          <td style="width:33%;">Co-Founders</td>
+                        </tr>
+                        <tr>
+                          <td>Designers</td>
+                          <td>Data Scientists</td>
+                          <td>Belly Dancers</td>
+                        </tr>
+                        <tr>
+                          <td>Product Managers</td>
+                          <td>Technical Sales People</td>
+                          <td>Superstars</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="slide3" style="display:none;" class="items_group clearfix">
+                  <div class="column one column_column">
+                    <h3 style="letter-spacing:20px;text-align:center;">PRICING</h3>
+                    <h5 style="letter-spacing:8px; margin-top:-5px;text-align:center;">SOMETHING A LITTLE DIFFERENT</h5>
+
+                    <div style="padding-right:100px;padding-left:100px;margin-top:30px;">
+                      <div class="column one-third column_column">
+                        <h5 style="letter-spacing:8px;text-align:center;">CLASSIC</h5>
+                        <p style="font-size:16px;">
+                          Traditional price plan. Pre-agreed fee payable following your new hires first day.
+                        </p>
+                      </div>
+                      <div class="column one-third column_column">
+                        <h5 style="letter-spacing:8px;text-align:center;">SUBSCRIPTION</h5>
+                        <p style="font-size:16px;">
+                          Monthly subscription service for all the hiring you can muster. Tiered structure which we will design with you. We can even work onsite when you need us!
+                        </p>
+                      </div>
+                      <div class="column one-third column_column">
+                        <h5 style="letter-spacing:8px;text-align:center;">IW HOURLY</h5>
+                        <p style="font-size:16px;">
+                          For when contractors just aren’t flexible enough.
+                        </p>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- Contact form section -->
+            <div class="section " id="contactSection" style="padding-top:80px; padding-bottom:40px; background-color:rgba(15, 221, 175,.5);">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
                   <!-- One Sixth (1/6) Column -->
@@ -190,22 +330,15 @@
                   <!-- Two Third (2/3) Column -->
                   <div class="column two-third column_column ">
                     <div class="column_attr align_center animate" data-anim-type="fadeInUp">
-                      <p style="color: #626262; font-size:24px;">S  T  A  R  T  U  P  S  ,  M  E  E  T    T  A  L  E  N  T</p>
-                      <p style="color: #626262; font-size:24px;">
-                          Supporting Startups in their mission to change the world.
-                      </p>
-                      <p style="font-size:16px; color:#626262">
-                        Startups need people who dare to be great, and we know how to find them, its what we do.
-                        <!-- <br /> -->
-                        We source and introduce talent with a passion for building the future.
-                        <!-- <br /> -->
-                        Innovators, Game changers, Pioneers;
-                        <!-- <br /> -->
-                        we’re here to help those who are building our tomorrow, to help them accelerate.
-                      </p>
+                    <a class="button getTalent" style="margin-left:10px;margin-right:10px;letter-spacing:8px;font-size:20px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
 
-                      <!-- <hr class="no_line hrmargin_b_30" /> -->
+                    <a class="button getHired" style="margin-left:10px;margin-right:10px;letter-spacing:8px;font-size:20px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
 
+                      <!-- <h2 style="color: #ffffff;">Hello!</h2>
+                      <hr class="no_line hrmargin_b_30" />
+                      <p style="font-size:24px;">
+                        <a style="color:#fff;" href="tel:+44123456789">(+44) 123.456.789</a>
+                      </p> -->
                     </div>
                   </div>
 
@@ -215,59 +348,17 @@
               </div>
             </div>
 
+            <!-- Map section -->
+            <div class="section mcb-section full-width " style="padding-top:0px; padding-bottom:0px; ">
+              <div class="section_wrapper mcb-section-inner">
+                <div class="wrap mcb-wrap one clearfix">
+                  <!-- One Full Row-->
+                  <div class="column mcb-column one column_map ">
 
-
-
-
-
-            <div id="whatWeDoSection" class="section no-margin-h no-margin-v full-width " style="padding-top:0px; padding-bottom:0px; background-color:#f9f9f9">
-              <div class="section_wrapper clearfix">
-                <div class="items_group clearfix">
-
-                  <!-- 1st block -->
-                  <div class="column one-second column_column">
-                    <div class="column_attr align_right">
-                      <div style="padding: 50px 6%; max-width: 570px; float: right;">
-                        <hr class="no_line hrmargin_b_20" />
-                        <h3>WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
-                        <hr class="no_line hrmargin_b_40" />
-                        <div style="overflow: hidden;">
-                          <!-- <div style="width: 25%; float: left; clear: both;">
-                            <div class="image_frame no_link scale-with-grid aligncenter no_border">
-                              <div class="image_wrapper">
-                                <img class="scale-with-grid" src="images/greenCheck.png" alt="" />
-                              </div>
-                            </div>
-                          </div> -->
-                          <div style="width: 70%; float: left; text-align: left; margin-left: 5%; padding: 8px 0 0 0;">
-                            <h5>&bull;Cost-effective (Talent) recruitment solutions designed to help innovators accelerate.</h5>
-                          </div>
-                          <hr class="no_line hrmargin_b_30" />
-                          <!-- <div style="width: 25%; float: left; clear: both;">
-                            <div class="image_frame no_link scale-with-grid aligncenter no_border">
-                              <div class="image_wrapper">
-                                <img class="scale-with-grid" src="images/greenCheck.png" alt="" />
-                              </div>
-                            </div>
-                          </div> -->
-                          <div style="width: 70%; float: left; text-align: left; margin-left: 5%; padding: 8px 0 0 0;">
-                            <h5>&bull;We offer a flexible and tailored talent solution for your business no matter where you are on your journey.</h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- One Second (1/2) Column -->
-                  <!-- <div class="column one-second column_image">
-                    <div class="image_frame no_link scale-with-grid aligncenter no_border">
-                      <div class="image_wrapper"><img class="scale-with-grid" src="images/businessmanSample.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div> -->
-                  <!-- One Second (1/2) Column -->
-                  <div class="column one-second">
-                    <div class="image_frame no_link scale-with-grid aligncenter no_border">
-                      <div class="image_wrapper"><img class="scale-with-grid" src="images/getTalentCallout.jpg" alt="" />
+                    <!-- Google map area -->
+                    <div class="google-map-wrapper no_border">
+                      <div class="google-map" id="google-map-area-567bc6f0d360c" style="width:100%; height:500px;">
+                        &nbsp;
                       </div>
                     </div>
                   </div>
@@ -275,170 +366,37 @@
               </div>
             </div>
 
-            <!-- 4 blocks section right -->
-            <div class="section no-margin-h no-margin-v full-width " style="padding-top:0px; padding-bottom:0px; background-color:#f9f9f9">
-              <div class="section_wrapper clearfix">
-                <div class="items_group clearfix">
-                  <!-- One Second (1/2) Column -->
-                  <div class="column one-second">
-                    <div class="image_frame no_link scale-with-grid aligncenter no_border">
-                      <div class="image_wrapper"><img class="scale-with-grid" src="images/getHiredCallout.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <!-- One Second (1/2) Column -->
-                  <div class="column one-second column_column">
-                    <div class="column_attr align_left">
-                      <div style="padding: 50px 6%;">
-                        <hr class="no_line hrmargin_b_20" />
-                        <h3>WHAT WE DO BEST...</h3>
-                        <hr class="no_line hrmargin_b_40" />
-                        <h5>While we are always ready to deliver against the rarest and diverse set of skillsets, our most frequent requests are often around some of the following areas;</h5>
-
-                        <table>
-                          <tr>
-                            <td>Engineers</td>
-                            <td>App Developers</td>
-                            <td>Co-Founders</td>
-                          </tr>
-                          <tr>
-                            <td>Designers</td>
-                            <td>Data Scientists</td>
-                            <td>Belly Dancers</td>
-                          </tr>
-                          <tr>
-                            <td>Product Managers</td>
-                            <td>Technical Sales People</td>
-                            <td>Superstars</td>
-                          </tr>
-                        </table>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- MAIN CONTENT SECTIONS END -->
           </div>
-
-          <!-- Parallax bar section -->
-          <div id="pricingSection" class="section " style="padding-top:100px; padding-bottom:150px; background-color:; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
-            <div class="section_wrapper clearfix">
-              <div class="items_group clearfix">
-                <!-- One full width row-->
-                <div class="column one column_column">
-                  <div class="column_attr align_center">
-                    <hr class="no_line hrmargin_b_20" />
-                    <h2>PRICING</h2>
-                    <h5 class="hrmargin_0">Something a little different?</h5>
-                  </div>
-                </div>
-
-                <div class="column one-third column_column">
-                  <div class="column_attr ">
-                    <div>
-                      <h4>Velit mauris egestas quam</h4>
-                      <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="column one-third column_column">
-                  <div class="column_attr ">
-                    <div>
-                      <h4>Velit mauris egestas quam</h4>
-                      <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="column one-third column_column">
-                  <div class="column_attr ">
-                    <div>
-                      <h4>Velit mauris egestas quam</h4>
-                      <h6>Quent per conubia nostra, per inceptos himenaeos. Mauris in erat justoac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,ut aliquam massa nisl quis neque. Suspendisse in orci enim.</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contact form section -->
-          <div class="section " id="contactSection" style="padding-top:80px; padding-bottom:40px; background-color:rgba(15, 221, 175,.5);">
-            <div class="section_wrapper clearfix">
-              <div class="items_group clearfix">
-                <!-- One Sixth (1/6) Column -->
-                <div class="column one-sixth column_placeholder">
-                  <div class="placeholder">
-                    &nbsp;
-                  </div>
-                </div>
-
-                <!-- Two Third (2/3) Column -->
-                <div class="column two-third column_column ">
-                  <div class="column_attr align_center animate" data-anim-type="fadeInUp">
-                    <h2 style="color: #ffffff;">Hello!</h2>
-                    <hr class="no_line hrmargin_b_30" />
-                    <p style="font-size:24px;">
-                      <a style="color:#fff;" href="tel:+44123456789">(+44) 123.456.789</a>
-                    </p>
-                  </div>
-                </div>
-
-
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Map section -->
-          <div class="section mcb-section full-width " style="padding-top:0px; padding-bottom:0px; ">
-            <div class="section_wrapper mcb-section-inner">
-              <div class="wrap mcb-wrap one clearfix">
-                <!-- One Full Row-->
-                <div class="column mcb-column one column_map ">
-
-                  <!-- Google map area -->
-                  <div class="google-map-wrapper no_border">
-                    <div class="google-map" id="google-map-area-567bc6f0d360c" style="width:100%; height:500px;">
-                      &nbsp;
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- MAIN CONTENT SECTIONS END -->
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Footer-->
-  <footer id="Footer" class="clearfix">
-    <div class="widgets_wrapper">
-      <div class="container">
-        <div class="column one">
-          <!-- Text Area -->
-          <aside id="text-2" class="widget widget_text">
-            <div class="textwidget">
-              <div style="text-align: center;">
-                <p class="contact_icons">
-                  <a href="#"><i class="icon-skype-circled"></i></a>
-                  <a href="#"><i class="icon-gplus-circled"></i></a>
-                  <a href="#"><i class="icon-twitter-circled"></i></a>
-                  <a href="#"><i class="icon-linkedin-circled"></i></a>
-                </p>
-                <p style="font-size: 18px; color:#0fddaf">
-                  © 2010-2016 www.IntelligentWays.com
-                </p>
+    <!-- Footer-->
+    <footer id="Footer" class="clearfix">
+      <div class="widgets_wrapper">
+        <div class="container">
+          <div class="column one">
+            <!-- Text Area -->
+            <aside id="text-2" class="widget widget_text">
+              <div class="textwidget">
+                <div style="text-align: center;">
+                  <p class="contact_icons">
+                    <a href="#"><i class="icon-skype-circled"></i></a>
+                    <a href="#"><i class="icon-gplus-circled"></i></a>
+                    <a href="#"><i class="icon-twitter-circled"></i></a>
+                    <a href="#"><i class="icon-linkedin-circled"></i></a>
+                  </p>
+                  <p style="font-size: 18px; color:#0fddaf">
+                    © 2010-2016 www.IntelligentWays.com
+                  </p>
+                </div>
               </div>
-            </div>
-          </aside>
+            </aside>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
 
   </div>
@@ -674,7 +632,7 @@
 
     function scrollToAnchor(aid) {
 
-      var aTag = jQuery("#" + aid );
+      var aTag = jQuery("#" + aid);
       jQuery('html,body').animate({
         scrollTop: aTag.offset().top
       }, 'slow');

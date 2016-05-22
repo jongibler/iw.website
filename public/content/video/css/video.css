@@ -477,9 +477,7 @@
 	.ui-tabs .ui-tabs-nav li.ui-state-active a:after {
 		background: #0fddaf;
 	}
-	table tr:hover td {
-		background: #0fddaf;
-	}
+
 
 /* Pricing */
 	.pricing-box .plan-header .price sup.currency,

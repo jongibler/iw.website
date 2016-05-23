@@ -84,20 +84,47 @@
       #slide-3-layer-3-mobile {
         display: block;
       }
+      #getHiredM, #getTalentM {
+        display: block;
+      }
+      #getHired, #getTalent {
+        display: none;
+      }
     }
 
-    #slide1contentM, #slide2contentM, #slide3contentM  {
-      display:none;
+    #slide1contentM,
+    #slide2contentM,
+    #slide3contentM,
+    #getHiredM,
+    #getTalentM {
+      display: none;
     }
 
     @media only screen and (max-width: 640px) {
-      #slide1contentM, #slide2contentM, #slide3contentM  {
-        display:block;
+      #slide1contentM,
+      #slide2contentM,
+      #slide3contentM {
+        display: block;
       }
-      #slide1content, #slide2content, #slide3content   {
-        display:none;
+      #slide1content,
+      #slide2content,
+      #slide3content {
+        display: none;
       }
+      #leftArrow {
+        left: -70px !important;
+      }
+      #rightArrow {
+        right: -70px !important;
+      }
+    }
 
+    #leftArrow {
+      left: -30px;
+    }
+
+    #rightArrow {
+      right: -30px;
     }
 
     h3 {
@@ -120,13 +147,13 @@
       cursor: pointer !important;
     }
 
-    .getTalent:hover {
+    #getTalent:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
       background-color: rgba(15, 221, 175, 1) !important;
     }
 
-    .getHired:hover {
+    #getHired:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
       background-color: rgba(15, 221, 175, 1) !important;
@@ -216,10 +243,8 @@
                       </p>
                       <p style="font-size:16px; color:#626262">
                         Startups need people who dare to be great, and we know how to find them, its what we do.
-                        <br />
-                        We source and introduce talent with a passion for building the future. Innovators, Game changers, Pioneers;
-                        <br />
-                        we’re here to help those who are building our tomorrow, to help them accelerate.
+                        <br /> We source and introduce talent with a passion for building the future. Innovators, Game changers, Pioneers;
+                        <br /> we’re here to help those who are building our tomorrow, to help them accelerate.
                       </p>
 
                     </div>
@@ -257,8 +282,8 @@
             <div id="whatWeDoSection" class="section " style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
               <div class="section_wrapper clearfix" style="height:200px;">
 
-                <img style="position:absolute; left:-30px; top:50%; cursor:pointer;" src="images/leftArrow.png" onclick="slideLeft();" />
-                <img style="position:absolute; right:-30px; top:50%; cursor:pointer;" src="images/rightArrow.png" onclick="slideRight();" />
+                <img id="leftArrow" style="position:absolute; top:50%; cursor:pointer;" src="images/leftArrow.png" onclick="slideLeft();" />
+                <img id="rightArrow" style="position:absolute; top:50%; cursor:pointer;" src="images/rightArrow.png" onclick="slideRight();" />
 
                 <div id="slide1" class="items_group clearfix">
                   <div id="slide1content" class="column one column_column">
@@ -368,7 +393,7 @@
             </div>
 
             <!-- Contact form section -->
-            <div class="section " id="contactSection" style="padding-top:80px; padding-bottom:40px; background-color:rgba(15, 221, 175,.5);">
+            <div class="section " id="contactSection" style="padding-top:100px; padding-bottom:60px; background-color:rgba(15, 221, 175,.5);">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
                   <!-- One Sixth (1/6) Column -->
@@ -382,8 +407,11 @@
                   <div class="column two-third column_column ">
                     <div class="column_attr align_center animate" data-anim-type="fadeInUp">
 
-                      <a class="button getTalent" style="width:200px;height:25px;margin-left:10px;margin-right:10px;letter-spacing:8px;font-size:20px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
-                    <a class="button getHired" style="width:200px;height:25px;margin-left:10px;margin-right:10px;letter-spacing:8px;font-size:20px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+                      <a id="getTalent" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:15px;margin-right:15px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
+                      <a id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:15px;margin-right:15px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+
+                      <a id="getTalentM" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:-10px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
+                      <a id="getHiredM" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:-10px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
 
                       <!-- <h2 style="color: #ffffff;">Hello!</h2>
                       <hr class="no_line hrmargin_b_30" />

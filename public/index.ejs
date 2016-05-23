@@ -84,31 +84,26 @@
       #slide-3-layer-3-mobile {
         display: block;
       }
-      #getHiredM, #getTalentM {
-        display: block;
-      }
-      #getHired, #getTalent {
-        display: none;
-      }
     }
 
     #slide1contentM,
     #slide2contentM,
     #slide3contentM,
-    #getHiredM,
-    #getTalentM {
+    #calloutButtonsM {
       display: none;
     }
 
     @media only screen and (max-width: 640px) {
       #slide1contentM,
       #slide2contentM,
-      #slide3contentM {
+      #slide3contentM,
+      #calloutButtonsM {
         display: block;
       }
       #slide1content,
       #slide2content,
-      #slide3content {
+      #slide3content,
+      #calloutButtons {
         display: none;
       }
       #leftArrow {
@@ -150,13 +145,11 @@
     #getTalent:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
-      background-color: rgba(15, 221, 175, 1) !important;
     }
 
     #getHired:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
-      background-color: rgba(15, 221, 175, 1) !important;
     }
   </style>
 
@@ -210,7 +203,7 @@
                       data-transform_out="auto:auto;s:300;" data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
                     <img style="cursor:pointer;min-width:47px;min-height:27px;" src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
                   </div>
-                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3-mobile" data-x="center" data-hoffset="0" data-y="bottom" data-voffset="-200" data-width="" data-height="" data-transform_idle="" data-transform_in="opacity:0;s:300;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;"
+                  <div class="tp-caption tp-resizeme" id="slide-3-layer-3-mobile" data-x="center" data-hoffset="0" data-y="bottom" data-voffset="-800" data-width="" data-height="" data-transform_idle="" data-transform_in="opacity:0;s:300;e:Power3.easeInOut;" data-transform_out="auto:auto;s:300;"
                       data-start="0" data-actions='[{"event":"click","action":"scrollbelow","offset":"-60px"}]' data-responsive_offset="on" style="z-index: 7;">
                     <img style="min-width:47px;min-height:27px;" src="images/dummy.png " alt="" width="47" height="27" data-ww="47" data-hh="27" data-lazyload="content/video/images/splash_slider_arrow_bottom.png" data-no-retina>
                   </div>
@@ -407,11 +400,18 @@
                   <div class="column two-third column_column ">
                     <div class="column_attr align_center animate" data-anim-type="fadeInUp">
 
-                      <a id="getTalent" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:15px;margin-right:15px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
-                      <a id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:15px;margin-right:15px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+                      <div id="calloutButtons">
+                        <a id="getTalent" class="button" style="width:230px;height:35px;padding-top:20px;margin-right:15px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
+                        <a id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:15px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+                      </div>
 
-                      <a id="getTalentM" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:-10px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
-                      <a id="getHiredM" class="button" style="width:230px;height:35px;padding-top:20px;margin-left:-10px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+                      <div id="calloutButtonsM">
+                        <a id="getTalentM" class="button" style="margin-left:-10px;width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
+                        <a id="getHiredM" class="button" style="margin-left:-10px;width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+                      </div>
+
+
+
 
                       <!-- <h2 style="color: #ffffff;">Hello!</h2>
                       <hr class="no_line hrmargin_b_30" />

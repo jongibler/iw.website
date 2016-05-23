@@ -64,6 +64,10 @@
       display: none;
     }
 
+    #contactSection {
+      padding-top:100px; padding-bottom:60px; background-color:rgba(15, 221, 175,.5);
+    }
+
     @media only screen and (max-width: 760px) {
       #slide-1-layer-2 {
         display: none;
@@ -106,6 +110,9 @@
       }
       #rightArrow {
         right: -50px !important;
+      }
+      #contactSection {
+        padding-top:80px !important;;
       }
     }
 
@@ -185,10 +192,10 @@
                 <a class="menu-item" onclick="scrollToAnchor('startSection');">H O M E</a>
               </li>
               <li>
-                <a class="menu-item" onclick="setSlide(2);scrollToAnchor('sliderSection');">W H A T &nbsp;W E &nbsp;D O</a>
+                <a class="menu-item" onclick="scrollToAnchor('sloganSection');setSlide(1);">W H A T &nbsp;W E &nbsp;D O</a>
               </li>
               <li class="menu-item">
-                <a onclick="setSlide(3);scrollToAnchor('sliderSection');">P R I C I N G</a>
+                <a onclick="scrollToAnchor('sliderSection');setSlide(3);">P R I C I N G</a>
               </li>
               <li class="menu-item">
                 <a onclick="scrollToAnchor('contactSection');">C O N T A C T</a>
@@ -372,13 +379,11 @@
                     </div>
 
                 </div>
-
-
               </div>
             </div>
 
             <!-- Contact form section -->
-            <div class="section " id="contactSection" style="padding-top:100px; padding-bottom:60px; background-color:rgba(15, 221, 175,.5);">
+            <div class="section " id="contactSection">
               <div class="section_wrapper clearfix">
                 <div class="items_group clearfix">
                   <!-- One Sixth (1/6) Column -->
@@ -736,8 +741,10 @@
       }
 
       function setSlide(number){
+        jQuery('#slide1').hide();
+        jQuery('#slide2').hide();
+        jQuery('#slide3').hide();
         startStopSlider();
-        jQuery('#slide' + slideNumber).fadeOut();
         slideNumber=number;
         jQuery('#slide' + slideNumber).delay(500).fadeIn();
         setTimeout(startStopSlider(), 5000);

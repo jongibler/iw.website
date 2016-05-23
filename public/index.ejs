@@ -40,7 +40,7 @@
     }
 
     #Footer {
-      background-color:#626262;
+      background-color: #626262;
     }
 
     #Header_wrapper {
@@ -83,7 +83,8 @@
     #slide2contentM,
     #slide3contentM,
     #calloutButtonsM,
-    #logoM {
+    #logoM,
+    #pFooterM {
       display: none;
     }
 
@@ -94,12 +95,10 @@
       #calloutButtonsM {
         display: block;
       }
-
       #slide1content,
       #slide2content,
       #slide3content,
-      #calloutButtons
-      {
+      #calloutButtons {
         display: none;
       }
       #leftArrow {
@@ -118,10 +117,16 @@
         display: none;
       }
       #leftArrow {
-        display:none;
+        display: none;
       }
       #rightArrow {
-        display:none;
+        display: none;
+      }
+      #pFooter {
+        display: none;
+      }
+      #pFooterM {
+        display: block;
       }
     }
 
@@ -173,22 +178,20 @@
     <div id="Header_wrapper" class="bg-parallax" data-stellar-background-ratio="0.5">
       <!-- Header -->
       <header id="Header">
-
-
         <div id="Overlay">
           <nav id="overlay-menu">
             <ul id="menu-main-menu" class="overlay-menu">
               <li>
-                <a class="menu-item" onclick="scrollToAnchor('startSection')">H O M E</a>
+                <a class="menu-item" onclick="scrollToAnchor('startSection');">H O M E</a>
               </li>
               <li>
-                <a class="menu-item" onclick="scrollToAnchor('sloganSection')">W H A T &nbsp;W E &nbsp;D O</a>
+                <a class="menu-item" onclick="setSlide(2);scrollToAnchor('sliderSection');">W H A T &nbsp;W E &nbsp;D O</a>
               </li>
               <li class="menu-item">
-                <a onclick="scrollToAnchor('pricingSection')">P R I C I N G</a>
+                <a onclick="setSlide(3);scrollToAnchor('sliderSection');">P R I C I N G</a>
               </li>
               <li class="menu-item">
-                <a onclick="scrollToAnchor('contactSection')">C O N T A C T</a>
+                <a onclick="scrollToAnchor('contactSection');">C O N T A C T</a>
               </li>
             </ul>
           </nav>
@@ -248,10 +251,8 @@
                       </p>
                       <p style="font-size:16px; color:#626262">
                         Startups need people who dare to be great. We know how to find them, it's what we do.
-                        <br />
-                        We source and introduce talent with a passion for building the future. Innovators, Game changers, Pioneers;
-                        <br />
-                        we’re here to help those who are building our tomorrow, accelerate.
+                        <br /> We source and introduce talent with a passion for building the future. Innovators, Game changers, Pioneers;
+                        <br /> we’re here to help those who are building our tomorrow, accelerate.
                       </p>
 
                     </div>
@@ -261,32 +262,9 @@
               </div>
             </div>
 
-            <script>
-              var slideNumber = 1;
-
-              function slideRight() {
-                jQuery('#slide' + slideNumber).fadeOut();
-                if (slideNumber == 3) {
-                  slideNumber = 1;
-                } else {
-                  slideNumber++;
-                }
-                jQuery('#slide' + slideNumber).delay(1000).fadeIn();
-              };
-
-              function slideLeft() {
-                jQuery('#slide' + slideNumber).fadeOut();
-                if (slideNumber == 1) {
-                  slideNumber = 3;
-                } else {
-                  slideNumber--;
-                }
-                jQuery('#slide' + slideNumber).delay(1000).fadeIn();
-              };
-            </script>
-
             <!-- PARALLAX SLIDER SECTION -->
-            <div id="whatWeDoSection" class="section " style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+            <div id="sliderSection" onclick="startStopSlider();" class="section " style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+
               <div class="section_wrapper clearfix" style="height:200px;">
 
                 <img id="leftArrow" style="position:absolute; top:50%; cursor:pointer;" src="images/leftArrow.png" onclick="slideLeft();" />
@@ -309,18 +287,18 @@
                       <table>
                         <tr>
                           <td style="width:33%;">CTO</td>
-                          <td style="width:33%;">Architects</td>
-                          <td style="width:33%;">Programmers</td>
+                          <td style="width:33%;">Data scientists</td>
+                          <td style="width:33%;">Co-Founders</td>
                         </tr>
                         <tr>
-                          <td>Data scientists</td>
+                          <td>Architects</td>
                           <td>Product Managers</td>
-                          <td>Designers</td>
+                          <td>Technical Sales</td>
                         </tr>
                         <tr>
-                          <td>Co-Founders</td>
+                          <td>Programmers</td>
+                          <td>Designers</td>
                           <td>Marketers &amp; Growth Hackers</td>
-                          <td>Technical Sales</td>
                         </tr>
                       </table>
                     </div>
@@ -328,22 +306,22 @@
                   <div id="slide2contentM" class="column one column_column" style="margin-top:-20px;">
                     <h4 style="letter-spacing:3px;text-align:center;color:#626262">WHAT WE DO BEST</h3>
                     <h5 style="letter-spacing:4px; margin-top:-5px;text-align:center;">FREQUENTLY REQUESTED</h5>
-                    <div style="margin-left:-15px;">
+                    <div style="margin-left:-30px;">
                       <table>
                         <tr>
                           <td>CTO</td>
-                          <td>Architects</td>
-                          <td>Programmers</td>
-                        </tr>
-                        <tr>
                           <td>Data scientists</td>
-                          <td>Product Managers</td>
-                          <td>Designers</td>
+                          <td>Co-Founders</td>
                         </tr>
                         <tr>
-                          <td>Co-Founders</td>
-                          <td>Marketers &amp; Growth Hackers</td>
+                          <td>Architects</td>
+                          <td>Product Managers</td>
                           <td>Technical Sales</td>
+                        </tr>
+                        <tr>
+                          <td>Programmers</td>
+                          <td>Designers</td>
+                          <td>Marketers &amp; Growth Hackers</td>
                         </tr>
                       </table>
                     </div>
@@ -414,28 +392,16 @@
                   <div class="column two-third column_column ">
                     <div class="column_attr align_center animate" data-anim-type="fadeInUp">
 
-
                       <div id="calloutButtons">
-                        <a id="getTalent" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
-                        <a id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+                        <a href="mailto:talent@intelligentways.co.uk" id="getTalent" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
+                        <a href="mailto:hired@intelligentways.co.uk" id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
                       </div>
 
                       <div id="calloutButtonsM">
-                        <!-- <a id="getTalent" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
-                        <a id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a> -->
-
                         <a id="getTalentM" class="button" style="margin-left:-10px;width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
                         <a id="getHiredM" class="button" style="margin-left:-10px;width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
                       </div>
 
-
-
-
-                      <!-- <h2 style="color: #ffffff;">Hello!</h2>
-                      <hr class="no_line hrmargin_b_30" />
-                      <p style="font-size:24px;">
-                        <a style="color:#fff;" href="tel:+44123456789">(+44) 123.456.789</a>
-                      </p> -->
                     </div>
                   </div>
 
@@ -484,8 +450,11 @@
                     <a href="#"><i class="icon-twitter-circled"></i></a>
                     <a href="#"><i class="icon-linkedin-circled"></i></a>
                   </p> -->
-                  <p style="font-size: 18px; font-weight:bold; letter-spacing:2px; color:#0fddaf">
-                    07930275440  &nbsp;&nbsp; HELLO@INTELLIGENTWAYS.CO.UK
+                  <p id="pFooter" style="font-size: 14px; font-weight:400; letter-spacing:4px; color:#0fddaf">
+                    <a href="tel:07930275440">07930275440</a>  &nbsp;&nbsp; <a href="mailto:hello@intelligentways.co.uk">HELLO@INTELLIGENTWAYS.CO.UK</a>
+                  </p>
+                  <p id="pFooterM" style="font-size: 14px; font-weight:400; letter-spacing:4px; color:#0fddaf; text-align:center;">
+                    <a href="tel:07930275440">07930275440</a><br /><a style="font-weight:600;" href="mailto:hello@intelligentways.co.uk">E-MAIL</a>
                   </p>
                 </div>
               </div>
@@ -736,6 +705,57 @@
 
       jQuery('.overlay-menu-toggle').click();
     }
+
+      var slideNumber = 1;
+      function slideRight() {
+        jQuery('#slide' + slideNumber).fadeOut();
+        if (slideNumber == 3) {
+          slideNumber = 1;
+        } else {
+          slideNumber++;
+        }
+        jQuery('#slide' + slideNumber).delay(1000).fadeIn();
+      };
+
+      function slideLeft() {
+        jQuery('#slide' + slideNumber).fadeOut();
+        if (slideNumber == 1) {
+          slideNumber = 3;
+        } else {
+          slideNumber--;
+        }
+        jQuery('#slide' + slideNumber).delay(1000).fadeIn();
+      };
+
+      var tid = setInterval(scrollSlides, 4000);
+      function scrollSlides() {
+          slideRight();
+      }
+      function abortTimer() { // to be called when you want to stop the timer
+        clearInterval(tid);
+      }
+
+      function setSlide(number){
+        startStopSlider();
+        jQuery('#slide' + slideNumber).fadeOut();
+        slideNumber=number;
+        jQuery('#slide' + slideNumber).delay(500).fadeIn();
+        setTimeout(startStopSlider(), 5000);
+      }
+
+      function startStopSlider(){
+          if(sliding){
+            abortTimer();
+            sliding = false;
+          }
+          else {
+            tid = setInterval(scrollSlides, 4000);
+            sliding = true;
+          }
+      }
+
+      scrollSlides();
+      var sliding = true;
   </script>
 
 </body>

@@ -254,7 +254,7 @@
 	}
 
 	#Overlay {
-		background: rgba(15, 221, 175,.7);
+		background: rgba(15, 221, 175,.9);
 	}
 	#overlay-menu ul li a, .header-overlay .overlay-menu-toggle.focus {
 		color: #ffffff;

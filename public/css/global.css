@@ -6139,9 +6139,9 @@ a.icon_bar {
     color: #444;
 }
 
-.ui-tabs .ui-tabs-nav li.ui-state-active a:after,table tr:hover td,table tr:hover td a {
+/*.ui-tabs .ui-tabs-nav li.ui-state-active a:after,table tr:hover td,table tr:hover td a {
     color: #fff;
-}
+}*/
 
 .accordion .question .answer,.ui-tabs .ui-tabs-panel,.ui-tabs .ui-tabs-nav li.ui-state-active a,.ui-tabs .ui-tabs-nav li.ui-tabs-selected:after,.ui-tabs .ui-tabs-nav li.ui-state-active:after,.tabs_vertical.ui-tabs .ui-tabs-nav li.ui-state-active a {
     background-color: #fff;

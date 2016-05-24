@@ -41,6 +41,7 @@
 
     #Footer {
       background-color: #626262;
+
     }
 
     #Header_wrapper {
@@ -129,12 +130,14 @@
       #rightArrow {
         display: none;
       }
+
       #pFooter {
         display: none;
       }
       #pFooterM {
         display: block;
       }
+
     }
 
     #leftArrow {
@@ -168,11 +171,23 @@
     #getTalent:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
+      text-decoration:none !important;
     }
 
     #getHired:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
+    }
+    #getTalentM:hover {
+      color: #0fddaf !important;
+      border-color: #0fddaf !important;
+      text-decoration:none !important;
+    }
+
+    #getHiredM:hover {
+      color: #0fddaf !important;
+      border-color: #0fddaf !important;
+      text-decoration:none !important;
     }
   </style>
 
@@ -251,9 +266,11 @@
                 <div class="items_group clearfix">
 
                   <div class="column one column_column ">
-                    <div class="column_attr align_center">
+
+
+                    <div id="slogan2" class="column_attr align_center">
                       <p style="color: #626262; font-size:24px;letter-spacing:6px;padding-top:10px;line-height:1.4;margin-bottom:10px;">STARTUPS, MEET TALENT</p>
-                      <p style="color: #626262; font-size:24px;padding-bottom:15px;">
+                      <p style="color: #626262; font-size:24px;padding-bottom:15px;line-height:1.1;">
                         Supporting growth at every stage of your journey
                       </p>
                       <p style="font-size:16px; color:#626262">
@@ -261,9 +278,11 @@
                         <br /> We source and introduce talent with a passion for building the future. Innovators, Game changers, Pioneers;
                         <br /> we’re here to help those who are building our tomorrow, accelerate.
                       </p>
-
                     </div>
                   </div>
+
+
+                </div>
 
                 </div>
               </div>
@@ -441,7 +460,7 @@
     </div>
 
     <!-- Footer-->
-    <footer id="Footer" class="clearfix">
+    <footer id="Footer" class="clearfix" style="display:none;">
       <div class="widgets_wrapper">
         <div class="container">
           <div class="column one">
@@ -763,6 +782,7 @@
 
       scrollSlides();
       var sliding = true;
+
   </script>
 
 </body>

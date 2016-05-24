@@ -289,7 +289,7 @@
             </div>
 
             <!-- PARALLAX SLIDER SECTION -->
-            <div id="sliderSection" onclick="startStopSlider();" class="section " style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+            <div id="sliderSection" onclick="startStopSlider();" class="section" style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
 
               <div class="section_wrapper clearfix" style="height:200px;">
 
@@ -310,7 +310,7 @@
                     <h3 style="letter-spacing:20px;text-align:center;">WHAT WE DO BEST</h3>
                     <h5 style="letter-spacing:8px; margin-top:-5px;text-align:center;">FREQUENTLY REQUESTED</h5>
                     <div style="padding-left:130px;padding-right:150px;">
-                      <table>
+                      <table style="margin-left:-15px;">
                         <tr>
                           <td style="width:33%;">CTO</td>
                           <td style="width:33%;">Data scientists</td>
@@ -751,7 +751,7 @@
         jQuery('#slide' + slideNumber).delay(1000).fadeIn();
       };
 
-      var tid = setInterval(scrollSlides, 4000);
+      var tid = setInterval(scrollSlides, 6000);
       function scrollSlides() {
           slideRight();
       }
@@ -775,7 +775,7 @@
             sliding = false;
           }
           else {
-            tid = setInterval(scrollSlides, 4000);
+            tid = setInterval(scrollSlides, 6000);
             sliding = true;
           }
       }

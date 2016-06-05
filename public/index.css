@@ -1,0 +1,179 @@
+.mfn-main-slider {
+  background-color: #1a1a1a;
+}
+
+#Footer {
+  background-color: #626262;
+
+}
+
+#Header_wrapper {
+  z-index: 2;
+}
+
+#Content {
+  /*position:relative;*/
+  z-index: 3;
+}
+
+#Wrapper {
+  /* margin-bottom:230px;  */
+}
+
+#slide-1-layer-2-mobile {
+  display: none;
+}
+
+#slide-3-layer-3-mobile {
+  display: none;
+}
+
+#contactSection {
+  padding-top:100px; padding-bottom:60px; background-color:rgba(15, 221, 175,.5);
+}
+
+.content_slider {
+  padding: 0px !important;
+
+}
+@media only screen and (max-width: 760px) {
+
+
+
+
+  #slide-1-layer-2 {
+    display: none;
+  }
+  #slide-1-layer-2-mobile {
+    display: block;
+  }
+  #slide-3-layer-3 {
+    display: none;
+  }
+  #slide-3-layer-3-mobile {
+    display: block;
+  }
+}
+
+#slide1contentM,
+#slide2contentM,
+#slide3contentM,
+#calloutButtonsM,
+#logoM,
+#pFooterM,
+#slide1sm, #slide1md
+ {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+
+
+  #slide1contentM,
+  #slide2contentM,
+  #slide3contentM,
+  #calloutButtonsM
+   {
+    display: block;
+  }
+  #slide1content,
+  #slide2content,
+  #slide3content,
+  #calloutButtons {
+    display: none;
+  }
+  #leftArrow {
+    left: -50px !important;
+  }
+  #rightArrow {
+    right: -50px !important;
+  }
+  #contactSection {
+    padding-top:50px !important;;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+
+
+  #logoM, #slide1md {
+    display: block;
+  }
+  #logo, #slide1lg {
+    display: none;
+  }
+  #leftArrow {
+    display: none;
+  }
+  #rightArrow {
+    display: none;
+  }
+
+  #pFooter {
+    display: none;
+  }
+  #pFooterM {
+    display: block;
+  }
+
+}
+
+#leftArrow {
+  left: -30px;
+}
+
+#rightArrow {
+  right: -30px;
+}
+
+h3 {
+  color: #626262 !important;
+}
+
+h5 {
+  color: #626262 !important;
+}
+
+table,
+tr,
+td {
+  border: none !important;
+  font-size: 16px;
+  text-align: center;
+}
+
+.menu-item {
+  cursor: pointer !important;
+}
+
+#getTalent:hover {
+  color: #0fddaf !important;
+  border-color: #0fddaf !important;
+  text-decoration:none !important;
+}
+
+#getHired:hover {
+  color: #0fddaf !important;
+  border-color: #0fddaf !important;
+}
+#getTalentM:hover {
+  color: #0fddaf !important;
+  border-color: #0fddaf !important;
+  text-decoration:none !important;
+}
+
+#getHiredM:hover {
+  color: #0fddaf !important;
+  border-color: #0fddaf !important;
+  text-decoration:none !important;
+}
+
+.caroufredsel_wrapper {
+  border:none !important;
+}
+
+.content_slider {
+  height:300px;
+  padding-top:100px;
+}

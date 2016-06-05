@@ -204,10 +204,10 @@
           <nav id="overlay-menu">
             <ul id="menu-main-menu" class="overlay-menu">
               <li>
-                <a class="menu-item" onclick="scrollToAnchor('startSection');">H O M E</a>
+                <a class="menu-item" onclick="scrollToAnchor('startSection');setSlide(1);">H O M E</a>
               </li>
               <li>
-                <a class="menu-item" onclick="scrollToAnchor('sloganSection');setSlide(1);">W H A T &nbsp;W E &nbsp;D O</a>
+                <a class="menu-item" onclick="scrollToAnchor('sliderSection');setSlide(2);">W H A T &nbsp;W E &nbsp;D O</a>
               </li>
               <li class="menu-item">
                 <a onclick="scrollToAnchor('sliderSection');setSlide(3);">P R I C I N G</a>
@@ -269,12 +269,12 @@
 
 
                     <div id="slogan2" class="column_attr align_center">
-                      <p style="color: #626262; font-size:24px;letter-spacing:6px;padding-top:10px;line-height:1.4;margin-bottom:10px;">STARTUPS, MEET TALENT</p>
+                      <p style="color: #626262; font-size:24px;letter-spacing:6px;padding-top:10px;line-height:1.4;margin-bottom:10px;">INNOVATORS, MEET TALENT</p>
                       <p style="color: #626262; font-size:24px;padding-bottom:15px;line-height:1.1;">
-                        Supporting growth at every stage of your journey
+                        Hiring Solutions for Technology Leaders
                       </p>
                       <p style="font-size:16px; color:#626262">
-                        Startups need people who dare to be great. We know how to find them, it's what we do.
+                        Companies need people who dare to be great. We know how to find them, it's what we do.
                         <br /> We source and introduce talent with a passion for building the future. Innovators, Game changers, Pioneers;
                         <br /> we’re here to help those who are building our tomorrow, accelerate.
                       </p>
@@ -751,7 +751,7 @@
         jQuery('#slide' + slideNumber).delay(1000).fadeIn();
       };
 
-      var tid = setInterval(scrollSlides, 6000);
+      var tid = setInterval(scrollSlides, 8000);
       function scrollSlides() {
           slideRight();
       }
@@ -775,7 +775,7 @@
             sliding = false;
           }
           else {
-            tid = setInterval(scrollSlides, 6000);
+            tid = setInterval(scrollSlides, 8000);
             sliding = true;
           }
       }

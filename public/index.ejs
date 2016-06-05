@@ -41,7 +41,6 @@
 
     #Footer {
       background-color: #626262;
-
     }
 
     #Header_wrapper {
@@ -66,7 +65,9 @@
     }
 
     #contactSection {
-      padding-top:100px; padding-bottom:60px; background-color:rgba(15, 221, 175,.5);
+      padding-top: 100px;
+      padding-bottom: 60px;
+      background-color: rgba(15, 221, 175, .5);
     }
 
     @media only screen and (max-width: 760px) {
@@ -113,7 +114,8 @@
         right: -50px !important;
       }
       #contactSection {
-        padding-top:50px !important;;
+        padding-top: 50px !important;
+        ;
       }
     }
 
@@ -130,14 +132,12 @@
       #rightArrow {
         display: none;
       }
-
       #pFooter {
         display: none;
       }
       #pFooterM {
         display: block;
       }
-
     }
 
     #leftArrow {
@@ -171,23 +171,24 @@
     #getTalent:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
-      text-decoration:none !important;
+      text-decoration: none !important;
     }
 
     #getHired:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
     }
+
     #getTalentM:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
-      text-decoration:none !important;
+      text-decoration: none !important;
     }
 
     #getHiredM:hover {
       color: #0fddaf !important;
       border-color: #0fddaf !important;
-      text-decoration:none !important;
+      text-decoration: none !important;
     }
   </style>
 
@@ -284,24 +285,24 @@
 
                 </div>
 
-                </div>
               </div>
             </div>
+          </div>
 
-            <!-- PARALLAX SLIDER SECTION -->
-            <div id="sliderSection" onclick="startStopSlider();" class="section" style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
+          <!-- PARALLAX SLIDER SECTION -->
+          <div id="sliderSection" class="section" style="padding-top:100px; padding-bottom:150px; background-image:url(images/parallaxWall.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed; background-size:cover; -webkit-background-size:cover">
 
-              <div class="section_wrapper clearfix" style="height:200px;">
+            <div class="section_wrapper clearfix" style="height:200px;">
 
-                <img id="leftArrow" style="position:absolute; top:50%; cursor:pointer;" src="images/leftArrow.png" onclick="slideLeft();" />
-                <img id="rightArrow" style="position:absolute; top:50%; cursor:pointer;" src="images/rightArrow.png" onclick="slideRight();" />
+              <img id="leftArrow" style="position:absolute; top:50%; cursor:pointer;" src="images/leftArrow.png" onclick="slideLeft();" />
+              <img id="rightArrow" style="position:absolute; top:50%; cursor:pointer;" src="images/rightArrow.png" onclick="slideRight();" />
 
-                <div id="slide1" class="items_group clearfix">
-                  <div id="slide1content" class="column one column_column">
-                    <h3 style="letter-spacing:10px; text-align:center; margin-top:80px;">WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
-                  </div>
-                  <div id="slide1contentM" class="column one column_column">
-                    <h4 style="letter-spacing:5px;color:#626262;text-align:center;margin-top:50px;font-size:30px;line-height:1.1;">WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
+              <div id="slide1" class="items_group clearfix">
+                <div id="slide1content" class="column one column_column">
+                  <h3 style="letter-spacing:10px; text-align:center; margin-top:80px;">WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
+                </div>
+                <div id="slide1contentM" class="column one column_column">
+                  <h4 style="letter-spacing:5px;color:#626262;text-align:center;margin-top:50px;font-size:30px;line-height:1.1;">WE BUILD TALENTED TEAMS FOR TECHNOLOGY BUSINESSES</h3>
                   </div>
                 </div>
 
@@ -717,8 +718,14 @@
         stickyEl.attr("src", "content/video/images/sticky_retina_video.png").width(stickyLogoW).height(stickyLogoH);
       }
     });
+
+
     jQuery('#Content').show();
     jQuery('#Footer').show();
+
+    var slideNumber = 1;
+    var tid = null;
+    startSlider();
 
     function scrollToAnchor(aid) {
 
@@ -730,56 +737,64 @@
       jQuery('.overlay-menu-toggle').click();
     }
 
-      var slideNumber = 1;
-      function slideRight() {
-        jQuery('#slide' + slideNumber).fadeOut();
-        if (slideNumber == 3) {
-          slideNumber = 1;
-        } else {
-          slideNumber++;
+    function slideRight() {
+      jQuery('#slide' + slideNumber).fadeOut();
+      if (slideNumber == 3) {
+        slideNumber = 1;
+      } else {
+        slideNumber++;
+      }
+      jQuery('#slide' + slideNumber).delay(1000).fadeIn();
+    };
+
+    function slideLeft() {
+      jQuery('#slide' + slideNumber).fadeOut();
+      if (slideNumber == 1) {
+        slideNumber = 3;
+      } else {
+        slideNumber--;
+      }
+      jQuery('#slide' + slideNumber).delay(1000).fadeIn();
+    };
+
+    function scrollSlides() {
+        slideRight();
+    }
+    function abortTimer() { // to be called when you want to stop the timer
+      clearInterval(tid);
+    }
+
+    function setSlide(number){
+      stopSlider();
+
+      jQuery('#slide1').hide();
+      jQuery('#slide2').hide();
+      jQuery('#slide3').hide();
+
+      slideNumber=number;
+
+      jQuery('#slide' + slideNumber).delay(500).fadeIn();
+    }
+
+    function startStopSlider(){
+        if(sliding){
+          stopSlider();
         }
-        jQuery('#slide' + slideNumber).delay(1000).fadeIn();
-      };
-
-      function slideLeft() {
-        jQuery('#slide' + slideNumber).fadeOut();
-        if (slideNumber == 1) {
-          slideNumber = 3;
-        } else {
-          slideNumber--;
+        else {
+          startSlider();
         }
-        jQuery('#slide' + slideNumber).delay(1000).fadeIn();
-      };
+    }
 
-      var tid = setInterval(scrollSlides, 8000);
-      var sliding = true;
-      function scrollSlides() {
-          slideRight();
-      }
-      function abortTimer() { // to be called when you want to stop the timer
-        clearInterval(tid);
-      }
 
-      function setSlide(number){
-        jQuery('#slide1').hide();
-        jQuery('#slide2').hide();
-        jQuery('#slide3').hide();
-        startStopSlider();
-        slideNumber=number;
-        jQuery('#slide' + slideNumber).delay(500).fadeIn();
-        //setTimeout(startStopSlider(), 5000);
-      }
+    function startSlider() {
+      tid = setInterval(scrollSlides, 8000);
+      sliding = true;
+    }
 
-      function startStopSlider(){
-          if(sliding){
-            abortTimer();
-            sliding = false;
-          }
-          else {
-            tid = setInterval(scrollSlides, 8000);
-            sliding = true;
-          }
-      }
+    function stopSlider(){
+      abortTimer();
+      sliding = false;
+    }
 
   </script>
 

@@ -45,26 +45,33 @@
     <div id="Header_wrapper" class="bg-parallax" data-stellar-background-ratio="0.5">
       <!-- Header -->
       <header id="Header">
+
+        <!--OVERLAY-->
         <div id="Overlay">
+
           <nav id="overlay-menu">
-            <ul id="menu-main-menu" class="overlay-menu">
-              <li>
-                <a class="menu-item" onclick="scrollToAnchor('startSection');setSlide(1);">H O M E</a>
-              </li>
-              <li>
-                <a class="menu-item" onclick="scrollToAnchor('sliderSection');setSlide(2);">W H A T &nbsp;W E &nbsp;D O</a>
-              </li>
-              <li class="menu-item">
-                <a onclick="scrollToAnchor('sliderSection');setSlide(3);">P R I C I N G</a>
-              </li>
-              <li class="menu-item">
-                <a onclick="scrollToAnchor('contactSection');">C O N T A C T</a>
-              </li>
-            </ul>
+              <ul id="menu-main-menu" class="overlay-menu">
+                <li>
+                  <a class="menu-item" onclick="scrollToAnchor('startSection');setSlide(1);">H O M E</a>
+                </li>
+                <li>
+                  <a class="menu-item" onclick="scrollToAnchor('sliderSection');setSlide(2);">W H A T &nbsp;W E &nbsp;D O</a>
+                </li>
+                <li class="menu-item">
+                  <a onclick="scrollToAnchor('sliderSection');setSlide(3);">P R I C I N G</a>
+                </li>
+                <li class="menu-item">
+                  <a onclick="scrollToAnchor('contactSection');">C O N T A C T</a>
+                </li>
+              </ul>
           </nav>
+
+          <div id="overlay-menu-gethired" style="display=none;">
+              <p id="whatIsYourName"></p>
+              <input id="txtName" type="text" />
+          </div>
+
         </div><a class="overlay-menu-toggle" href="#"><i class="open icon-menu"></i><i class="close icon-cancel"></i></a>
-
-
 
         <!-- Revolution slider area-->
         <div id="startSection" class="mfn-main-slider">
@@ -263,7 +270,7 @@
 
                       <div id="calloutButtons">
                         <a href="mailto:talent@intelligentways.co.uk" id="getTalent" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;border-color:#626262">GET TALENT</a>
-                        <a href="mailto:hired@intelligentways.co.uk" id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
+                        <a id="getHired" class="button" style="width:230px;height:35px;padding-top:20px;letter-spacing:8px;font-size:24px;font-weight:bold;border-radius:0px;border-width:2px;color:#FFF">GET HIRED</a>
                       </div>
 
                       <div id="calloutButtonsM">

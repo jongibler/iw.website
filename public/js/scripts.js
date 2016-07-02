@@ -124,13 +124,67 @@
 		 * --------------------------------------------------------------------------- */
 		jQuery('.overlay-menu-toggle').click(function(e){
 			e.preventDefault();
+
+			var getHiredDiv = jQuery("#overlay-menu-gethired");
+			getHiredDiv.hide();
+
+			var navMenu =jQuery('#overlay-menu');
+			navMenu.show();
 			
 			jQuery(this).toggleClass('focus');
-			jQuery('#Overlay').stop(true,true).fadeToggle(500);
+			jQuery('#Overlay').stop(true,true).fadeToggle(500);			
 			
-			var menuH = jQuery('#Overlay nav').height() / 2;
+			var menuH = navMenu.height() / 2;
 			jQuery('#Overlay nav').css( 'margin-top', '-' + menuH + 'px' );	
 		});
+		
+
+		/* ---------------------------------------------------------------------------
+		 * Get hired overlay
+		 * --------------------------------------------------------------------------- */
+		jQuery('#getHired, #getHiredM').click(function(e){
+			e.preventDefault();
+
+			var navMenu =jQuery('#overlay-menu');
+			navMenu.hide();
+
+			var getHiredDiv = jQuery("#overlay-menu-gethired");
+			getHiredDiv.show();
+			
+			jQuery('.overlay-menu-toggle').toggleClass('focus');
+			jQuery('#Overlay').stop(true,true).fadeToggle(500);
+						
+			
+			var menuH = getHiredDiv.height() / 2;
+			getHiredDiv.css( 'margin-top', '-' + menuH + 'px' );	
+
+			type();
+			setTimeout(function() { jQuery('#txtName').show(); document.getElementById('txtName').focus(); }, 2000);
+
+		});
+
+		
+
+    var i = 0,
+    isTag,
+    text,
+	str = "Please tell us your name ";
+
+function type() {
+
+    text = str.slice(0, ++i);
+    if (text === str) return;
+
+    document.getElementById('whatIsYourName').innerHTML = text;
+
+    var char = text.slice(-1);
+    if( char === '<' ) isTag = true;
+    if( char === '>' ) isTag = false;
+
+    if (isTag) return type();
+    setTimeout(type, 80);
+};
+		
 		
 	/* ---------------------------------------------------------------------------
 	 * Sliding Footer | Height

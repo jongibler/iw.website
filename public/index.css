@@ -153,3 +153,19 @@
       border-color: #0fddaf !important;
       text-decoration: none !important;
     }
+
+    #txtName {
+      color: white !important; 
+      background-color: transparent !important;      
+      border:none !important;
+      border-color: transparent !important;      
+    }
+
+    #overlay-menu-gethired input{
+      font-size: 32px;
+      width:700px;
+    }
+
+    #whatIsYourName {
+      font-size:38px;
+    }

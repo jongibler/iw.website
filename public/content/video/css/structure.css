@@ -771,6 +771,22 @@ body.header-stack:not(.template-slider) #Header { min-height: 315px; }
 	#overlay-menu ul li a:hover:before,
 	#overlay-menu ul li a:hover:after { opacity: 1; -webkit-transform: translateX(0px); -moz-transform: translateX(0px); transform: translateX(0px); }
 
+/* Get Hired Overlay
+================================================== */
+#overlay-menu-gethired { position:absolute; width:700px; left:50%; margin-left:-350px; top:50%; margin-top:-150px;}
+#overlay-menu-gethired ul li { text-align:center;}
+#overlay-menu-gethired ul li a { color:#fff; font-size:34px; line-height:52px; letter-spacing:3px; text-decoration:none;}
+#overlay-menu-gethired ul li a:hover { opacity: .8;}
+
+	#overlay-menu-gethired ul li a:before,
+	#overlay-menu-gethired ul li a:after { display: inline-block; opacity: 0; -webkit-transition: -webkit-transform 0.3s, opacity 0.2s; -moz-transition: -moz-transform 0.3s, opacity 0.2s; transition: transform 0.3s, opacity 0.2s; }
+	#overlay-menu-gethired ul li a:before {margin-right: 20px; content: '['; -webkit-transform: translateX(20px); -moz-transform: translateX(20px); transform: translateX(20px); }
+	#overlay-menu-gethired ul li a:after { margin-left: 20px; content: ']'; -webkit-transform: translateX(-20px); -moz-transform: translateX(-20px); transform: translateX(-20px); }
+	#overlay-menu-gethired ul li a:hover:before,
+	#overlay-menu-gethired ul li a:hover:after,
+	#overlay-menu-gethired ul li a:hover:before,
+	#overlay-menu-gethired ul li a:hover:after { opacity: 1; -webkit-transform: translateX(0px); -moz-transform: translateX(0px); transform: translateX(0px); }
+
 
 /* #Subheader
 ================================================== */

@@ -11,6 +11,8 @@
         stickyEl.attr("src", "content/video/images/sticky_retina_video.png").width(stickyLogoW).height(stickyLogoH);
       }
     });
+
+    jQuery('#txtName').hide();
   
   
   

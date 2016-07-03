@@ -67,27 +67,43 @@
           </nav>
 
           <div id="overlay-menu-gethired" style="display=none;">
-            <div id="getHiredForm">
+            <div id="getHiredForm1">
               <p id="whatIsYourNameText" style="margin-bottom: 30px;">&nbsp;</p>
               <input id="txtName" type="text" style="margin-bottom: 30px; visibility:hidden;" />
               <p id="emailText" style="margin-bottom: 30px;">&nbsp;</p>
               <input id="txtEmail" type="text" style="margin-bottom: 30px; visibility:hidden;" />
+              <a onclick="showForm2()" id="nextLink1" style="visibility:hidden; float:right;">Next</a>
+            </div>
+            <div id="getHiredForm2" style="display:none;">
               <p id="whatAreYourSkillsText" style="margin-bottom: 30px;">&nbsp;</p>
               <div id="tagsDiv" style="visibility:hidden;">
-                <button class="tagButton">C#</button>
-                <button class="tagButton">javascript</button>
-                <button class="tagButton">HTML</button>
-                <button class="tagButton">Full Stack</button>
-                <button class="tagButton">Tech Lead</button>
-                <button class="tagButton">Python</button>
-                <button class="tagButton">C#</button>
-                <button class="tagButton">javascript</button>
-                <button class="tagButton">HTML</button>
-                <button class="tagButton">Full Stack</button>
-                <button class="tagButton">Tech Lead</button>
-                <button class="tagButton">Python</button>
+                <div class="skillButton">C#</div>
+                <div class="skillButton">javascript</div>
+                <div class="skillButton">HTML</div>
+                <div class="skillButton">Tech Lead</div>
+                <div class="skillButton">Cloud servers</div>
+                <div class="skillButton">Project Manager</div>
+                <div class="skillButton">C#</div>
+                <div class="skillButton">javascript</div>
+                <div class="skillButton">HTML</div>
+                <div class="skillButton">Tech Lead</div>
+                <div class="skillButton">Cloud servers</div>
+                <div class="skillButton">Project Manager</div>         
+                <div class="skillButton">C#</div>
+                <div class="skillButton">javascript</div>
+                <div class="skillButton">HTML</div>
+                <div class="skillButton">Tech Lead</div>
+                <div class="skillButton">Cloud servers</div>
+                <div class="skillButton">Project Manager</div>           
+                <input type="text" id="txtNewTag" />
+                <div class="plusButton">+</div>
+                <br/>
+                <br/>
+                <a onclick="showForm3()" id="nextLink2" style="visibility:hidden; float:right;">Next</a>
               </div>
-              <a id="uploadCVLink" onclick="jQuery('#uploadCV').click();" style="visibility:hidden; margin-top:30px;">Upload your CV</a>
+            </div>
+            <div id="getHiredForm3" style="display:none;">
+              <a id="uploadCVLink" onclick="jQuery('#uploadCV').click();" style="visibility:hidden; margin-top:30px;">Click to upload your CV</a>
               <input type="file" id="uploadCV" accept="application/pdf" style="visibility:hidden;" />
               <input id="txtFilename" type="text" style="visibility:hidden;">
 
@@ -96,6 +112,7 @@
                 <button id="btnOkGetHired" style="width:700px; font-size:24px; font-weight:bold;">I  &nbsp;&nbsp; A C C E P T</button>
               </div>
             </div>
+
 
             <div id="thankYouDiv" style="display:none;">
               <p id="thankYouText1" style="display:none;">THANK YOU!</p>

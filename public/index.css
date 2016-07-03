@@ -178,11 +178,17 @@
 
     #thankYouText1 {           
       letter-spacing: 12px;
-      font-weight: 800;
-      margin-top:250px;
+      font-weight: 800;      
     }
 
-    #tagsDiv button, #btnOkGetHired{      
+    .tagButton {
+      color:#626262 !important;
+      border-color:#626262 !important;
+      margin-bottom: 30px;
+      border-radius:0px !important;
+    }
+
+    #btnOkGetHired{      
       color:#626262 !important;
       border-color:#626262 !important;
       margin-bottom: 30px;
@@ -194,7 +200,8 @@
       background-color: rgba(255,255,255,.3) !important;      
     }
 
-    #uploadCVLink, #termsLink {
+
+    #uploadCVLink, #termsLink, #nextLink1, #nextLink2{
       margin-bottom: 30px; 
       margin-top:30px; color:white;
       font-size: 32px;
@@ -209,6 +216,38 @@
     
     #txtFilename {
       margin-top: 30px;
+    }
+
+
+
+    .skillButton, .plusButton {
+    color: #626262 !important;
+    border: solid;
+    border-color: #626262;
+    font-size: 16px;
+    border-width: 1.5px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+    }
+
+    .plusButton:hover, .skillButton:hover {
+          background-color: rgba(255,255,255,.5);
+    }
+
+    .tagSelected {
+          background-color: rgba(255,255,255,.5);
+    }
+
+    #txtNewTag {
+      color:#626262;
+      padding:8px;
+      font-size:18px;
+      display: inline-block;
+      width:125px;
+      border-radius: 0px;
+      margin-left: 15px;
     }
 
     

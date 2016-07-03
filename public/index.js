@@ -14,7 +14,7 @@
 
   
     jQuery('#Content').show();
-    jQuery('#Footer').show();
+    //jQuery('#Footer').show();
 
     var slideNumber = 1;
     var tid = null;

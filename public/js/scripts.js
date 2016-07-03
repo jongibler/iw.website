@@ -127,12 +127,12 @@
 	/* ---------------------------------------------------------------------------
 	 * Sliding Footer | Height
 	 * --------------------------------------------------------------------------- */
-	function mfn_footer() {
-		if (jQuery('.footer-fixed #Footer, .footer-sliding #Footer').length) {
-			var footerH = jQuery('#Footer').height();
-			jQuery('#Content').css('margin-bottom', footerH + 'px');
-		}
-	}
+	// function mfn_footer() {
+	// 	if (jQuery('.footer-fixed #Footer, .footer-sliding #Footer').length) {
+	// 		var footerH = jQuery('#Footer').height();
+	// 		jQuery('#Content').css('margin-bottom', footerH + 'px');
+	// 	}
+	// }
 
 
 	/* ---------------------------------------------------------------------------
@@ -925,7 +925,7 @@
 			mfn_sidebar();
 
 			// Sliding Footer | Height
-			mfn_footer();
+			//mfn_footer();
 
 			// Header Width
 			mfn_header();
@@ -1021,7 +1021,7 @@
 		mfn_sidebar();
 
 		// Sliding Footer | Height
-		mfn_footer();
+		//mfn_footer();
 
 		// Header | Width
 		mfn_header();
@@ -1174,7 +1174,7 @@
 		mfn_sidebar();
 
 		// Sliding Footer | Height
-		mfn_footer();
+		//mfn_footer();
 
 		// Header | Width
 		mfn_header();

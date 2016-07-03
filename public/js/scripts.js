@@ -156,34 +156,90 @@
 						
 			
 			var menuH = getHiredDiv.height() / 2;
+			menuH += 50;
 			getHiredDiv.css( 'margin-top', '-' + menuH + 'px' );	
 
-			type();
-			setTimeout(function() { jQuery('#txtName').show(); document.getElementById('txtName').focus(); }, 2000);
+			type1();
+			setTimeout(function() { $('#txtName').css('visibility','visible').hide().fadeIn(); document.getElementById('txtName').focus(); }, 2000);
 
 		});
 
-		
+		var txtNameKeyDowned = false;
+		jQuery('#txtName').keydown(function(e){
+			if (txtNameKeyDowned)
+				return;
+			txtNameKeyDowned = true;
+			setTimeout(function() {
+				type2();
+				setTimeout(function() {
+					 $('#tagsDiv').css('visibility','visible').hide().fadeIn();
+				}, 1500);				
+			}, 1000);
+		});
 
-    var i = 0,
-    isTag,
-    text,
-	str = "Please tell us your name ";
+		jQuery('.tagButton').click(function (e) {
+			jQuery('.tagButton').off("click");
+			$('#uploadCVLink').css('visibility','visible').hide().fadeIn();				
+		});
 
-function type() {
+	jQuery('#uploadCV').change(function(e){
+		var filename = this.value.replace(/^.*[\\\/]/, '');
+		jQuery('#txtFilename').val(filename);
+		$('#txtFilename').css('visibility','visible').hide().fadeIn();
+		$('#acceptDiv').css('visibility','visible').hide().fadeIn();
+	});
 
-    text = str.slice(0, ++i);
-    if (text === str) return;
+    var i1 = 0, i2 = 0, i3 = 0,
+	whatIsYourNameText = "Please tell us your name ",
+	whatAreYourSkillsText = "What are your top 5 skills ",
+	uploadCVText = "Upload your CV ",
+	isTag = false;
 
-    document.getElementById('whatIsYourName').innerHTML = text;
+function type1() {
+
+    var text = whatIsYourNameText.slice(0, ++i1);
+    if (text === whatIsYourNameText) return;
+
+    document.getElementById('whatIsYourNameText').innerHTML = text;
 
     var char = text.slice(-1);
     if( char === '<' ) isTag = true;
     if( char === '>' ) isTag = false;
 
-    if (isTag) return type();
-    setTimeout(type, 80);
+    if (isTag) return type1();
+    setTimeout(type1, 80);
 };
+
+
+function type2() {
+
+    var text = whatAreYourSkillsText.slice(0, ++i2);
+    if (text === whatAreYourSkillsText) return;
+
+    document.getElementById('whatAreYourSkillsText').innerHTML = text;
+
+    var char = text.slice(-1);
+    if( char === '<' ) isTag = true;
+    if( char === '>' ) isTag = false;
+
+    if (isTag) return type2();
+    setTimeout(type2, 80);
+};
+
+// function type3() {
+
+//     var text = uploadCVText.slice(0, ++i3);
+//     if (text === uploadCVText) return;
+
+//     document.getElementById('uploadCVText').innerHTML = text;
+
+//     var char = text.slice(-1);
+//     if( char === '<' ) isTag = true;
+//     if( char === '>' ) isTag = false;
+
+//     if (isTag) return type3();
+//     setTimeout(type3, 80);
+// };
 		
 		
 	/* ---------------------------------------------------------------------------

@@ -154,18 +154,45 @@
       text-decoration: none !important;
     }
 
-    #txtName {
-      color: white !important; 
-      background-color: transparent !important;      
-      border:none !important;
-      border-color: transparent !important;      
-    }
-
-    #overlay-menu-gethired input{
+    #txtName, #txtFilename {
+      color:#626262 !important;
+      background-color: transparent !important;
       font-size: 32px;
-      width:700px;
+      width:700px;      
+    }   
+
+    #whatIsYourNameText, #whatAreYourSkillsText, #uploadCVText {
+      font-size:32px;
+      color:white;
     }
 
-    #whatIsYourName {
-      font-size:38px;
+    #tagsDiv button, #btnOkGetHired{      
+      color:#626262 !important;
+      border-color:#626262 !important;
+      margin-bottom: 30px;
+      border-radius:0px !important;
     }
+
+    
+    #tagsDiv button:hover, #btnOkGetHired:hover{      
+      background-color: rgba(255,255,255,.3) !important;      
+    }
+
+    #uploadCVLink, #termsLink {
+      margin-bottom: 30px; 
+      margin-top:30px; color:white;
+      font-size: 32px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    
+    #uploadCVLink:hover, #termsLink:hover{
+      color: #626262 !important;
+    }
+
+    
+    #txtFilename {
+      margin-top: 30px;
+    }
+
+    

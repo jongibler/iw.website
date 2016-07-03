@@ -12,9 +12,6 @@
       }
     });
 
-    jQuery('#txtName').hide();
-  
-  
   
     jQuery('#Content').show();
     jQuery('#Footer').show();

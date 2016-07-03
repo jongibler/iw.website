@@ -165,13 +165,14 @@
 		jQuery('.overlay-menu-toggle').toggleClass('focus');
 		jQuery('#Overlay').stop(true, true).fadeToggle(500);
 
-
+		if (!formCompleted) {
 		var menuH = getHiredDiv.height() / 2;
 		menuH += 50;
 		getHiredDiv.css('margin-top', '-' + menuH + 'px');
 
 		typeName();
 		setTimeout(function () { $('#txtName').css('visibility', 'visible').hide().fadeIn(); document.getElementById('txtName').focus(); }, 2000);
+		}
 
 	});
 
@@ -213,6 +214,7 @@
 		$('#acceptDiv').css('visibility', 'visible').hide().fadeIn();
 	});
 
+	var formCompleted = false;
 	jQuery('#btnOkGetHired').click(function (e) {
 		e.preventDefault();
 
@@ -223,6 +225,7 @@
 		}
 
 		ShowThankYouMessage();
+		formCompleted = true;
 	});
 
 	function ShowThankYouMessage() {
@@ -239,7 +242,7 @@
 
     var i1 = 0, i2 = 0, i3 = 0, i4=0,
 		whatIsYourNameText = "Please tell us your name ",
-		whatAreYourSkillsText = "What are your top 5 skills ",
+		whatAreYourSkillsText = "What are your top 5 skills? ",
 		thankYouText = "We will get in touch soon. ",
 		emailText = "and your e-mail ",
 		isTag = false;

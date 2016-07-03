@@ -154,16 +154,32 @@
       text-decoration: none !important;
     }
 
-    #txtName, #txtFilename {
+    #txtName, #txtFilename, #txtEmail {
       color:#626262 !important;
       background-color: transparent !important;
       font-size: 32px;
       width:700px;      
     }   
 
-    #whatIsYourNameText, #whatAreYourSkillsText, #uploadCVText {
+    #overlay-menu-gethired p{
       font-size:32px;
       color:white;
+    }
+
+    #thankYouText, #thankYouText1 {
+      text-align: center;
+      font-size: 38px;
+
+    }
+
+     #thankYouText{
+       margin-top:50px;
+     }
+
+    #thankYouText1 {           
+      letter-spacing: 12px;
+      font-weight: 800;
+      margin-top:250px;
     }
 
     #tagsDiv button, #btnOkGetHired{      

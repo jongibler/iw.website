@@ -66,34 +66,45 @@
             </ul>
           </nav>
 
-          <div id="overlay-menu-gethired" style="display=none; margin-top:-50px;">
-            <p id="whatIsYourNameText" style="margin-bottom: 30px;">&nbsp;</p>
-            <input id="txtName" type="text" style="margin-bottom: 30px; visibility:hidden;" />
-            <p id="whatAreYourSkillsText" style="margin-bottom: 30px;">&nbsp;</p>
-            <div id="tagsDiv" style="visibility:hidden;">
-              <button class="tagButton">C#</button>
-              <button class="tagButton">javascript</button>
-              <button class="tagButton">HTML</button>
-              <button class="tagButton">Full Stack</button>
-              <button class="tagButton">Tech Lead</button>
-              <button class="tagButton">Python</button>
-              <button class="tagButton">C#</button>
-              <button class="tagButton">javascript</button>
-              <button class="tagButton">HTML</button>
-              <button class="tagButton">Full Stack</button>
-              <button class="tagButton">Tech Lead</button>
-              <button class="tagButton">Python</button>
-            </div>
-            <a id="uploadCVLink" onclick="jQuery('#uploadCV').click();" style="visibility:hidden; margin-top:30px;">Upload your CV</a>
-            <input type="file" id="uploadCV" accept="application/pdf" style="visibility:hidden;" />
-            <input id="txtFilename" type="text" style="visibility:hidden;">
+          <div id="overlay-menu-gethired" style="display=none;">
+            <div id="getHiredForm">
+              <p id="whatIsYourNameText" style="margin-bottom: 30px;">&nbsp;</p>
+              <input id="txtName" type="text" style="margin-bottom: 30px; visibility:hidden;" />
+              <p id="emailText" style="margin-bottom: 30px;">&nbsp;</p>
+              <input id="txtEmail" type="text" style="margin-bottom: 30px; visibility:hidden;" />
+              <p id="whatAreYourSkillsText" style="margin-bottom: 30px;">&nbsp;</p>
+              <div id="tagsDiv" style="visibility:hidden;">
+                <button class="tagButton">C#</button>
+                <button class="tagButton">javascript</button>
+                <button class="tagButton">HTML</button>
+                <button class="tagButton">Full Stack</button>
+                <button class="tagButton">Tech Lead</button>
+                <button class="tagButton">Python</button>
+                <button class="tagButton">C#</button>
+                <button class="tagButton">javascript</button>
+                <button class="tagButton">HTML</button>
+                <button class="tagButton">Full Stack</button>
+                <button class="tagButton">Tech Lead</button>
+                <button class="tagButton">Python</button>
+              </div>
+              <a id="uploadCVLink" onclick="jQuery('#uploadCV').click();" style="visibility:hidden; margin-top:30px;">Upload your CV</a>
+              <input type="file" id="uploadCV" accept="application/pdf" style="visibility:hidden;" />
+              <input id="txtFilename" type="text" style="visibility:hidden;">
 
-            <div id="acceptDiv" style="visibility:hidden;">
-              <p><a id="termsLink" style="margin-top:60px;font-size:16px;">Read our Terms and Conditions</a></p>
-              <button id="btnOkGetHired" style="width:700px; font-size:24px; font-weight:bold;">I  &nbsp;&nbsp; A C C E P T</button>
+              <div id="acceptDiv" style="visibility:hidden;">
+                <p><a id="termsLink" style="margin-top:60px;font-size:16px;">Read our Terms and Conditions</a></p>
+                <button id="btnOkGetHired" style="width:700px; font-size:24px; font-weight:bold;">I  &nbsp;&nbsp; A C C E P T</button>
+              </div>
             </div>
-            
+
+            <div id="thankYouDiv" style="display:none;">
+              <p id="thankYouText1" style="display:none;">THANK YOU!</p>              
+              <p id="thankYouText"></p>
+            </div>
+
           </div>
+
+
 
         </div><a class="overlay-menu-toggle" href="#"><i class="open icon-menu"></i><i class="close icon-cancel"></i></a>
 

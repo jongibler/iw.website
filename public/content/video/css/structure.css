@@ -773,7 +773,7 @@ body.header-stack:not(.template-slider) #Header { min-height: 315px; }
 
 /* Get Hired Overlay
 ================================================== */
-#overlay-menu-gethired { position:absolute; width:700px; left:50%; margin-left:-350px; top:50%; margin-top:-150px;}
+#overlay-menu-gethired { position:absolute; width:700px; left:50%; margin-left:-350px; top:55%; margin-top:-150px;}
 #overlay-menu-gethired ul li { text-align:center;}
 #overlay-menu-gethired ul li a { color:#fff; font-size:34px; line-height:52px; letter-spacing:3px; text-decoration:none;}
 #overlay-menu-gethired ul li a:hover { opacity: .8;}

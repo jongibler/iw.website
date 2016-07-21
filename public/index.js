@@ -336,7 +336,7 @@ jQuery('#btnOkGetHired').click(function (e) {
 
 function sendFile(file) {
 
-  //show progress 
+  //todo: show progress 
 
   var uri = "/uploadPDF";
   var xhr = new XMLHttpRequest();
@@ -346,9 +346,13 @@ function sendFile(file) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
 
-      //hide progress
+      //todo: hide progress
 
       var uploadedFileUrl = xhr.responseText;
+
+      var tagsSelected = [];
+      jQuery(".tagSelected").each(function() { tagsSelected.push(jQuery(this).text()) });
+      console.log(tagsSelected);
 
       jQuery.ajax({
         type: "POST",
@@ -356,7 +360,7 @@ function sendFile(file) {
         data: {
           "name": jQuery('#txtName').val(),
           "email": jQuery('#txtEmail').val(), 
-          "skills": ["c#", "javascript", "html", "nodejs"], 
+          "skills": tagsSelected, 
           "cvURL": uploadedFileUrl
         },
         success: function (res) {

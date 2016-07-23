@@ -12,6 +12,40 @@ jQuery(window).load(function () {
   }
 });
 
+var skillTags = [
+  "C#",
+  "javascript",
+  "Python",
+  "Ruby",
+  "Project Management",
+  "Agile",
+  ".Net",
+  "Cloud servers",
+  "HTML",
+  "Technical Lead",
+  "Client facing"
+];
+
+jQuery.each(skillTags, function (i, tag) {
+  jQuery("#tagsDiv").prepend("<div class='skillButton'>" + tag + "</div>")
+});
+
+jQuery('.plusButton').click(function (e) {
+  var newTagInput = jQuery('#txtNewTag');
+
+  if (newTagInput.val().trim() != '') {
+    newTagInput.before("<div class='skillButton tagSelected'>" + newTagInput.val().trim() + "</div>")
+    newTagInput.val('');
+  }
+  else {
+    newTagInput.addClass("txtNewTagError");
+  }
+});
+
+jQuery('#txtNewTag').change(function (e) {
+  jQuery(this).removeClass("txtNewTagError");
+});
+
 
 jQuery('#Content').show();
 //jQuery('#Footer').show();
@@ -309,8 +343,9 @@ jQuery('.skillButton').click(function (e) {
 		else {
     skillButton.addClass("tagSelected");
 		}
-
 });
+
+
 
 jQuery('#uploadCV').change(function (e) {
 		var filename = this.value.replace(/^.*[\\\/]/, '');
@@ -363,23 +398,19 @@ function sendFile(file) {
           "name": jQuery('#txtName').val(),
           "email": jQuery('#txtEmail').val(),
           "skills": tagsSelected,
-          "cvURL": uploadedFileUrl
+          "cvURL": uploadedFileUrl,
+          "isAvailable": true
         },
         success: function (res) {
           console.log(res);
         },
         dataType: "json"
       });
-
-
-
-      //post to api for creating talent...
-
       ShowThankYouMessage();
       formCompleted = true;
 
     } else {
-      //check for errors.
+      //todo: check for errors.
       //if error, hide progress, show message.
     }
   };

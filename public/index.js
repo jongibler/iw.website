@@ -351,7 +351,9 @@ function sendFile(file) {
       var uploadedFileUrl = xhr.responseText;
 
       var tagsSelected = [];
-      jQuery(".tagSelected").each(function() { tagsSelected.push(jQuery(this).text()) });
+      jQuery(".tagSelected").each(function () {
+        tagsSelected.push({ text: jQuery(this).text() });
+      });
       console.log(tagsSelected);
 
       jQuery.ajax({
@@ -359,8 +361,8 @@ function sendFile(file) {
         url: "http://localhost/api/talent",
         data: {
           "name": jQuery('#txtName').val(),
-          "email": jQuery('#txtEmail').val(), 
-          "skills": tagsSelected, 
+          "email": jQuery('#txtEmail').val(),
+          "skills": tagsSelected,
           "cvURL": uploadedFileUrl
         },
         success: function (res) {

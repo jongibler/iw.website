@@ -165,12 +165,29 @@
       text-decoration: none !important;
     }
 
-    #txtName, #txtFilename, #txtEmail {
-      color:#626262 !important;
+    #txtName, #txtFilename, #txtEmail {      
       background-color: transparent !important;
       font-size: 32px;
-      width:700px;      
+      width:500px;      
+      border-color: rgba(255,255,255,.5);            
+      color:white;
     }   
+
+    #greetingText1, #greetingText2 {
+      font-size:52px !important; 
+      text-align:center; 
+      margin-bottom:50px;
+    }
+    
+    #frm1Container label {
+      font-size: 34px;
+      color: white;
+      font-weight:100;
+      margin-bottom:25px;
+      text-align:left;
+      margin-left:96px;
+    }
+
 
     #overlay-menu-gethired p{
       font-size:32px;
@@ -199,37 +216,40 @@
       border-radius:0px !important;
     }
 
-    #btnOkGetHired{      
-      color:#626262 !important;
-      border-color:#626262 !important;
-      margin-bottom: 30px;
+    #btnNext1, #btnNext2, #btnUploadCV, #btnOkGetHired {    
+      letter-spacing: 8px;
+      font-size: 24px;
+      font-weight: bold;
+      border-width: 2px;
+      color:white !important;
+      border-color: #f7f7f7;      
       border-radius:0px !important;
+      width: 500px;
+      letter-spacing: 7px;
     }
 
+    .btnGetHiredForm:hover {
+      border-color:rgba(98,98,98,.5) !important;
+    }
     
-    #tagsDiv button:hover, #btnOkGetHired:hover{      
-      background-color: rgba(255,255,255,.3) !important;      
-    }
 
-
-    #uploadCVLink, #termsLink, #nextLink1, #nextLink2{
-      margin-bottom: 30px; 
-      margin-top:30px; color:white;
-      font-size: 32px;
-      text-decoration: underline;
+    #termsLink{
+      color:white;
       cursor: pointer;
+      margin-top:60px;
+      font-size:16px;
+      letter-spacing:5px;
+      
+      letter-spacing:7px;
+    }
+
+    #frm1Container input {
+      margin-left:50px;
     }
     
-    #uploadCVLink:hover, #termsLink:hover{
+    #termsLink:hover {
       color: #626262 !important;
     }
-
-    
-    #txtFilename {
-      margin-top: 30px;
-    }
-
-
 
     .skillButton, .plusButton {
       color: #626262 !important;
@@ -267,4 +287,22 @@
       border-color:red;
     }
 
-    
+    #getHiredForm1 {
+      margin-top:-100px;
+      text-align: center;
+      
+    }
+
+     #getHiredForm2, #getHiredForm3 {
+      
+      text-align: center;
+      
+    }
+
+#getHiredForm1 input {
+  margin-left:96px;
+}
+
+#getHiredForm3 input {
+  margin-left:96px;
+}

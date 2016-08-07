@@ -136,8 +136,6 @@ function validateEmail(x) {
 function showForm3() {
 		jQuery('#getHiredForm2').hide();
 		jQuery('#getHiredForm3').show();
-  jQuery('#uploadCVLink').css('visibility', 'visible').hide().fadeIn();
-
 }
 
 
@@ -181,26 +179,40 @@ function showForm2() {
   }, 1000);
 }
 
-var i1 = 0, i2 = 0, i3 = 0, i4 = 0,
-		whatIsYourNameText = "Please tell us your name ",
-		whatAreYourSkillsText = "What are your top 5 skills? ",
+var i1 = 0, i11 = 0, i2 = 0, i3 = 0, i4 = 0,
+		greetingText1 = "Hello, ",
+  greetingText2 = "Nice to meet you...",
+		whatAreYourSkillsText = "What do you do best? ",
 		thankYouText = "We will get in touch soon. ",
 		emailText = "and your e-mail ",
 		isTag = false;
 
-function typeName() {
+function typeGreeting1() {
+		var text = greetingText1.slice(0, ++i1);
+		if (text === greetingText1) return;
 
-		var text = whatIsYourNameText.slice(0, ++i1);
-		if (text === whatIsYourNameText) return;
-
-		document.getElementById('whatIsYourNameText').innerHTML = text;
+		document.getElementById('greetingText1').innerHTML = text;
 
 		var char = text.slice(-1);
 		if (char === '<') isTag = true;
 		if (char === '>') isTag = false;
 
-		if (isTag) return typeName();
-		setTimeout(typeName, 80);
+		if (isTag) return typeGreeting1();
+		setTimeout(typeGreeting1, 80);
+};
+
+function typeGreeting2() {
+		var text = greetingText2.slice(0, ++i11);
+		if (text === greetingText2) return;
+
+		document.getElementById('greetingText2').innerHTML = text;
+
+		var char = text.slice(-1);
+		if (char === '<') isTag = true;
+		if (char === '>') isTag = false;
+
+		if (isTag) return typeGreeting2();
+		setTimeout(typeGreeting2, 80);
 };
 
 
@@ -283,40 +295,33 @@ jQuery('.overlay-menu-toggle').click(function (e) {
  * Get hired overlay
  * --------------------------------------------------------------------------- */
 jQuery('#getHired').click(function (e) {
-		e.preventDefault();
+  e.preventDefault();
 
-		var navMenu = jQuery('#overlay-menu');
-		navMenu.hide();
+  var navMenu = jQuery('#overlay-menu');
+  navMenu.hide();
 
-		var getHiredDiv = jQuery("#overlay-menu-gethired");
-		getHiredDiv.show();
-		overlayOpen = true;
+  var getHiredDiv = jQuery("#overlay-menu-gethired");
+  getHiredDiv.show();
+  overlayOpen = true;
 
-		jQuery('.overlay-menu-toggle').toggleClass('focus');
-		jQuery('#Overlay').stop(true, true).fadeToggle(500);
+  jQuery('.overlay-menu-toggle').toggleClass('focus');
+  jQuery('#Overlay').stop(true, true).fadeToggle(500);
 
-		if (!formCompleted) {
+  if (!formCompleted) {
     var menuH = getHiredDiv.height() / 2;
     menuH += 50;
     getHiredDiv.css('margin-top', '-' + menuH + 'px');
 
-    typeName();
-    setTimeout(function () { jQuery('#txtName').css('visibility', 'visible').hide().fadeIn(); document.getElementById('txtName').focus(); }, 2000);
-		}
+    typeGreeting1();
+    setTimeout(typeGreeting2, 800);
+    setTimeout(function(){
+      jQuery('#getHiredGreeting').hide();
+      var getHiredForm1 =jQuery('#getHiredForm1'); 
+      getHiredForm1.fadeIn();      
+      jQuery('#txtName').focus();
+  }, 3000);
 
-});
-
-var txtNameKeyDowned = false;
-jQuery('#txtName').keydown(function (e) {
-		if (txtNameKeyDowned)
-    return;
-		txtNameKeyDowned = true;
-		setTimeout(function () {
-    typeEmail();
-    setTimeout(function () {
-      jQuery('#txtEmail').css('visibility', 'visible').hide().fadeIn();
-    }, 1500);
-		}, 500);
+  }
 });
 
 var txtEmailKeyDowned = false;

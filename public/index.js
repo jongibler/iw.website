@@ -181,7 +181,7 @@ function showForm2() {
 
 var i1 = 0, i11 = 0, i2 = 0, i3 = 0, i4 = 0,
 		greetingText1 = "Hello, ",
-  greetingText2 = "Nice to meet you...",
+  greetingText2 = "Nice to meet you... ",
 		whatAreYourSkillsText = "What do you do best? ",
 		thankYouText = "We will get in touch soon. ",
 		emailText = "and your e-mail ",
